@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64898A39BF3D120DDF0CC03F /* libPods-TimeManagerXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A8238BD797E288292FAC89 /* libPods-TimeManagerXTests.a */; };
+		9A7FFF411EDEBE420084C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF401EDEBE420084C772 /* main.m */; };
+		9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF431EDEBE420084C772 /* AppDelegate.m */; };
+		9A7FFF471EDEBE420084C772 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF461EDEBE420084C772 /* ViewController.m */; };
+		9A7FFF4A1EDEBE420084C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF481EDEBE420084C772 /* Main.storyboard */; };
+		9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF4B1EDEBE420084C772 /* TimeManagerX.xcdatamodeld */; };
+		9A7FFF4F1EDEBE420084C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF4E1EDEBE420084C772 /* Assets.xcassets */; };
+		9A7FFF521EDEBE420084C772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF501EDEBE420084C772 /* LaunchScreen.storyboard */; };
+		9A7FFF5D1EDEBE420084C772 /* TimeManagerXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF5C1EDEBE420084C772 /* TimeManagerXTests.m */; };
+		9A7FFF681EDEBE420084C772 /* TimeManagerXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */; };
+		C96C98E97747858B4766271D /* libPods-TimeManagerX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */; };
+		F86944FD74551BACE9DBB01E /* libPods-TimeManagerXUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A7FFF591EDEBE420084C772 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A7FFF341EDEBE420084C772 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A7FFF3B1EDEBE420084C772;
+			remoteInfo = TimeManagerX;
+		};
+		9A7FFF641EDEBE420084C772 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A7FFF341EDEBE420084C772 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A7FFF3B1EDEBE420084C772;
+			remoteInfo = TimeManagerX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22A8238BD797E288292FAC89 /* libPods-TimeManagerXTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerXTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F961842AC4F885C4602CA2 /* Pods-TimeManagerXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXTests/Pods-TimeManagerXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73DA0A649A988C1271F4F93B /* Pods-TimeManagerXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7834A64D34FEA62B65F2ACAC /* Pods-TimeManagerX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX.debug.xcconfig"; sourceTree = "<group>"; };
+		7F0A18E2A7356D66F51BF568 /* Pods-TimeManagerX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerX.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX.release.xcconfig"; sourceTree = "<group>"; };
+		9A7FFF3C1EDEBE420084C772 /* TimeManagerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7FFF401EDEBE420084C772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A7FFF421EDEBE420084C772 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9A7FFF431EDEBE420084C772 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9A7FFF451EDEBE420084C772 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9A7FFF461EDEBE420084C772 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9A7FFF491EDEBE420084C772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A7FFF4C1EDEBE420084C772 /* TimeManagerX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeManagerX.xcdatamodel; sourceTree = "<group>"; };
+		9A7FFF4E1EDEBE420084C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A7FFF511EDEBE420084C772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A7FFF531EDEBE420084C772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7FFF581EDEBE420084C772 /* TimeManagerXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeManagerXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7FFF5C1EDEBE420084C772 /* TimeManagerXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManagerXTests.m; sourceTree = "<group>"; };
+		9A7FFF5E1EDEBE420084C772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7FFF631EDEBE420084C772 /* TimeManagerXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeManagerXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManagerXUITests.m; sourceTree = "<group>"; };
+		9A7FFF691EDEBE420084C772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7FFF761EDEC1280084C772 /* TM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TM-Prefix.pch"; sourceTree = "<group>"; };
+		B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerXUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9041318A69B7496B12130B2 /* Pods-TimeManagerXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3B84DDFD5B16E3CB3FEBCC /* Pods-TimeManagerXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXTests/Pods-TimeManagerXTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A7FFF391EDEBE420084C772 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96C98E97747858B4766271D /* libPods-TimeManagerX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FFF551EDEBE420084C772 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64898A39BF3D120DDF0CC03F /* libPods-TimeManagerXTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FFF601EDEBE420084C772 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86944FD74551BACE9DBB01E /* libPods-TimeManagerXUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A7FFF331EDEBE420084C772 = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF3E1EDEBE420084C772 /* TimeManagerX */,
+				9A7FFF5B1EDEBE420084C772 /* TimeManagerXTests */,
+				9A7FFF661EDEBE420084C772 /* TimeManagerXUITests */,
+				9A7FFF3D1EDEBE420084C772 /* Products */,
+				C3041644D57966CBE70989CD /* Pods */,
+				BCC8B09DC9C16A45C4EC296F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A7FFF3D1EDEBE420084C772 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF3C1EDEBE420084C772 /* TimeManagerX.app */,
+				9A7FFF581EDEBE420084C772 /* TimeManagerXTests.xctest */,
+				9A7FFF631EDEBE420084C772 /* TimeManagerXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A7FFF3E1EDEBE420084C772 /* TimeManagerX */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF751EDEBE600084C772 /* Model */,
+				9A7FFF451EDEBE420084C772 /* ViewController.h */,
+				9A7FFF461EDEBE420084C772 /* ViewController.m */,
+				9A7FFF4E1EDEBE420084C772 /* Assets.xcassets */,
+				9A7FFF3F1EDEBE420084C772 /* Supporting Files */,
+			);
+			path = TimeManagerX;
+			sourceTree = "<group>";
+		};
+		9A7FFF3F1EDEBE420084C772 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF421EDEBE420084C772 /* AppDelegate.h */,
+				9A7FFF431EDEBE420084C772 /* AppDelegate.m */,
+				9A7FFF481EDEBE420084C772 /* Main.storyboard */,
+				9A7FFF501EDEBE420084C772 /* LaunchScreen.storyboard */,
+				9A7FFF531EDEBE420084C772 /* Info.plist */,
+				9A7FFF401EDEBE420084C772 /* main.m */,
+				9A7FFF761EDEC1280084C772 /* TM-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A7FFF5B1EDEBE420084C772 /* TimeManagerXTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF5C1EDEBE420084C772 /* TimeManagerXTests.m */,
+				9A7FFF5E1EDEBE420084C772 /* Info.plist */,
+			);
+			path = TimeManagerXTests;
+			sourceTree = "<group>";
+		};
+		9A7FFF661EDEBE420084C772 /* TimeManagerXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */,
+				9A7FFF691EDEBE420084C772 /* Info.plist */,
+			);
+			path = TimeManagerXUITests;
+			sourceTree = "<group>";
+		};
+		9A7FFF751EDEBE600084C772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FFF4B1EDEBE420084C772 /* TimeManagerX.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BCC8B09DC9C16A45C4EC296F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */,
+				22A8238BD797E288292FAC89 /* libPods-TimeManagerXTests.a */,
+				B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3041644D57966CBE70989CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7834A64D34FEA62B65F2ACAC /* Pods-TimeManagerX.debug.xcconfig */,
+				7F0A18E2A7356D66F51BF568 /* Pods-TimeManagerX.release.xcconfig */,
+				72F961842AC4F885C4602CA2 /* Pods-TimeManagerXTests.debug.xcconfig */,
+				FD3B84DDFD5B16E3CB3FEBCC /* Pods-TimeManagerXTests.release.xcconfig */,
+				D9041318A69B7496B12130B2 /* Pods-TimeManagerXUITests.debug.xcconfig */,
+				73DA0A649A988C1271F4F93B /* Pods-TimeManagerXUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A7FFF3B1EDEBE420084C772 /* TimeManagerX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A7FFF6C1EDEBE420084C772 /* Build configuration list for PBXNativeTarget "TimeManagerX" */;
+			buildPhases = (
+				13FEC98E83A83EC4E5B46CCD /* [CP] Check Pods Manifest.lock */,
+				9A7FFF381EDEBE420084C772 /* Sources */,
+				9A7FFF391EDEBE420084C772 /* Frameworks */,
+				9A7FFF3A1EDEBE420084C772 /* Resources */,
+				2366F3268125EF5DC4B5E4E5 /* [CP] Embed Pods Frameworks */,
+				F4D7262233BB0650D871F151 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeManagerX;
+			productName = TimeManagerX;
+			productReference = 9A7FFF3C1EDEBE420084C772 /* TimeManagerX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A7FFF571EDEBE420084C772 /* TimeManagerXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A7FFF6F1EDEBE420084C772 /* Build configuration list for PBXNativeTarget "TimeManagerXTests" */;
+			buildPhases = (
+				D58782EC7F44927AF1B31590 /* [CP] Check Pods Manifest.lock */,
+				9A7FFF541EDEBE420084C772 /* Sources */,
+				9A7FFF551EDEBE420084C772 /* Frameworks */,
+				9A7FFF561EDEBE420084C772 /* Resources */,
+				F180F17FE4C9091449BE3A70 /* [CP] Embed Pods Frameworks */,
+				6C56FA0B09C2627C72EC2EFF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A7FFF5A1EDEBE420084C772 /* PBXTargetDependency */,
+			);
+			name = TimeManagerXTests;
+			productName = TimeManagerXTests;
+			productReference = 9A7FFF581EDEBE420084C772 /* TimeManagerXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A7FFF621EDEBE420084C772 /* TimeManagerXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A7FFF721EDEBE420084C772 /* Build configuration list for PBXNativeTarget "TimeManagerXUITests" */;
+			buildPhases = (
+				329370C146039CA6C9449386 /* [CP] Check Pods Manifest.lock */,
+				9A7FFF5F1EDEBE420084C772 /* Sources */,
+				9A7FFF601EDEBE420084C772 /* Frameworks */,
+				9A7FFF611EDEBE420084C772 /* Resources */,
+				44B1A37A43F0D6E9EE04ADC6 /* [CP] Embed Pods Frameworks */,
+				1533A81811ACE6148813D4FF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A7FFF651EDEBE420084C772 /* PBXTargetDependency */,
+			);
+			name = TimeManagerXUITests;
+			productName = TimeManagerXUITests;
+			productReference = 9A7FFF631EDEBE420084C772 /* TimeManagerXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A7FFF341EDEBE420084C772 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = yu;
+				TargetAttributes = {
+					9A7FFF3B1EDEBE420084C772 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					9A7FFF571EDEBE420084C772 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9A7FFF3B1EDEBE420084C772;
+					};
+					9A7FFF621EDEBE420084C772 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9A7FFF3B1EDEBE420084C772;
+					};
+				};
+			};
+			buildConfigurationList = 9A7FFF371EDEBE420084C772 /* Build configuration list for PBXProject "TimeManagerX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A7FFF331EDEBE420084C772;
+			productRefGroup = 9A7FFF3D1EDEBE420084C772 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A7FFF3B1EDEBE420084C772 /* TimeManagerX */,
+				9A7FFF571EDEBE420084C772 /* TimeManagerXTests */,
+				9A7FFF621EDEBE420084C772 /* TimeManagerXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A7FFF3A1EDEBE420084C772 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7FFF521EDEBE420084C772 /* LaunchScreen.storyboard in Resources */,
+				9A7FFF4F1EDEBE420084C772 /* Assets.xcassets in Resources */,
+				9A7FFF4A1EDEBE420084C772 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FFF561EDEBE420084C772 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FFF611EDEBE420084C772 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13FEC98E83A83EC4E5B46CCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1533A81811ACE6148813D4FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2366F3268125EF5DC4B5E4E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		329370C146039CA6C9449386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44B1A37A43F0D6E9EE04ADC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C56FA0B09C2627C72EC2EFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeManagerXTests/Pods-TimeManagerXTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58782EC7F44927AF1B31590 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F180F17FE4C9091449BE3A70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeManagerXTests/Pods-TimeManagerXTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4D7262233BB0650D871F151 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A7FFF381EDEBE420084C772 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7FFF471EDEBE420084C772 /* ViewController.m in Sources */,
+				9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */,
+				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
+				9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FFF541EDEBE420084C772 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7FFF5D1EDEBE420084C772 /* TimeManagerXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A7FFF5F1EDEBE420084C772 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7FFF681EDEBE420084C772 /* TimeManagerXUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A7FFF5A1EDEBE420084C772 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A7FFF3B1EDEBE420084C772 /* TimeManagerX */;
+			targetProxy = 9A7FFF591EDEBE420084C772 /* PBXContainerItemProxy */;
+		};
+		9A7FFF651EDEBE420084C772 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A7FFF3B1EDEBE420084C772 /* TimeManagerX */;
+			targetProxy = 9A7FFF641EDEBE420084C772 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A7FFF481EDEBE420084C772 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A7FFF491EDEBE420084C772 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A7FFF501EDEBE420084C772 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A7FFF511EDEBE420084C772 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A7FFF6A1EDEBE420084C772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9A7FFF6B1EDEBE420084C772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A7FFF6D1EDEBE420084C772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7834A64D34FEA62B65F2ACAC /* Pods-TimeManagerX.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TimeManagerX/TM-Prefix.pch";
+				INFOPLIST_FILE = TimeManagerX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ou.TimeManagerX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9A7FFF6E1EDEBE420084C772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0A18E2A7356D66F51BF568 /* Pods-TimeManagerX.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TimeManagerX/TM-Prefix.pch";
+				INFOPLIST_FILE = TimeManagerX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ou.TimeManagerX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9A7FFF701EDEBE420084C772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F961842AC4F885C4602CA2 /* Pods-TimeManagerXTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimeManagerXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ou.TimeManagerXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeManagerX.app/TimeManagerX";
+			};
+			name = Debug;
+		};
+		9A7FFF711EDEBE420084C772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD3B84DDFD5B16E3CB3FEBCC /* Pods-TimeManagerXTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimeManagerXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ou.TimeManagerXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeManagerX.app/TimeManagerX";
+			};
+			name = Release;
+		};
+		9A7FFF731EDEBE420084C772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9041318A69B7496B12130B2 /* Pods-TimeManagerXUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TimeManagerXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ou.TimeManagerXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TimeManagerX;
+			};
+			name = Debug;
+		};
+		9A7FFF741EDEBE420084C772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73DA0A649A988C1271F4F93B /* Pods-TimeManagerXUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TimeManagerXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ou.TimeManagerXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TimeManagerX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A7FFF371EDEBE420084C772 /* Build configuration list for PBXProject "TimeManagerX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A7FFF6A1EDEBE420084C772 /* Debug */,
+				9A7FFF6B1EDEBE420084C772 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A7FFF6C1EDEBE420084C772 /* Build configuration list for PBXNativeTarget "TimeManagerX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A7FFF6D1EDEBE420084C772 /* Debug */,
+				9A7FFF6E1EDEBE420084C772 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A7FFF6F1EDEBE420084C772 /* Build configuration list for PBXNativeTarget "TimeManagerXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A7FFF701EDEBE420084C772 /* Debug */,
+				9A7FFF711EDEBE420084C772 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A7FFF721EDEBE420084C772 /* Build configuration list for PBXNativeTarget "TimeManagerXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A7FFF731EDEBE420084C772 /* Debug */,
+				9A7FFF741EDEBE420084C772 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A7FFF4B1EDEBE420084C772 /* TimeManagerX.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A7FFF4C1EDEBE420084C772 /* TimeManagerX.xcdatamodel */,
+			);
+			currentVersion = 9A7FFF4C1EDEBE420084C772 /* TimeManagerX.xcdatamodel */;
+			path = TimeManagerX.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9A7FFF341EDEBE420084C772 /* Project object */;
+}
