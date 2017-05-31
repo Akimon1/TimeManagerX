@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TMHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [UITabBar appearance].tintColor = [UIColor colorWithRed: 30/255.0 green:144/255.0 blue:255/255.0 alpha:1];
+    [[UITabBar appearance] setBackgroundColor:[UIColor colorWithRed:249/255.0 green:249/255.0 blue:249/255.0 alpha:0.9]];
+    [UITabBar appearance].translucent = NO;
+    UIImage *backBtnIcon = [UIImage imageNamed:@"toolbar-back"];
+    
+    [UINavigationBar appearance].backIndicatorImage = backBtnIcon;
+    [UINavigationBar appearance].backIndicatorTransitionMaskImage = backBtnIcon;
+    [UINavigationBar appearance].barTintColor = kTitle_bar_Color;
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:19.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
+    
+    //如要测试你所写的UIViewController, 只需要修改TMHomeViewController为你自己的ViewController类
+    //为避免git冲突，测试完毕后请务必修改恢复为TMHomeViewController。
+    //不要尝试修改除了TMHomeViewController以外的任何一个词，哪怕空格换行。谢谢。
+    self.window.rootViewController = [[TMHomeViewController alloc] init];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
