@@ -21,6 +21,9 @@
 @property(nonatomic,strong) UIButton *sinaButton;
 @property(nonatomic,strong) UIButton *airbnbButton;
 @property(nonatomic,strong) UILabel *bottomLabel;
+@property(nonatomic,strong) NSURL *url;
+@property(nonatomic,strong) UIViewController *webViewController;
+@property(nonatomic,strong) UIWebView *webView;
 
 @end
 

@@ -10,7 +10,6 @@
 		64898A39BF3D120DDF0CC03F /* libPods-TimeManagerXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A8238BD797E288292FAC89 /* libPods-TimeManagerXTests.a */; };
 		9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */; };
 		9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E61EDF04BF001C1B8F /* TMListPageViewController.m */; };
-		9A5DB2EA1EDF04D2001C1B8F /* TMFunPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E91EDF04D2001C1B8F /* TMFunPageViewController.m */; };
 		9A7FFF411EDEBE420084C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF401EDEBE420084C772 /* main.m */; };
 		9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF431EDEBE420084C772 /* AppDelegate.m */; };
 		9A7FFF4A1EDEBE420084C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF481EDEBE420084C772 /* Main.storyboard */; };
@@ -20,6 +19,7 @@
 		9A7FFF5D1EDEBE420084C772 /* TimeManagerXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF5C1EDEBE420084C772 /* TimeManagerXTests.m */; };
 		9A7FFF681EDEBE420084C772 /* TimeManagerXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */; };
 		9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */; };
+		A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */; };
 		A67E34F81EE028240008EAF0 /* TMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E34F71EE028240008EAF0 /* TMSignView.m */; };
 		A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */; };
 		C96C98E97747858B4766271D /* libPods-TimeManagerX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */; };
@@ -53,8 +53,6 @@
 		9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomePageViewController.m; sourceTree = "<group>"; };
 		9A5DB2E51EDF04BF001C1B8F /* TMListPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListPageViewController.h; sourceTree = "<group>"; };
 		9A5DB2E61EDF04BF001C1B8F /* TMListPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListPageViewController.m; sourceTree = "<group>"; };
-		9A5DB2E81EDF04D2001C1B8F /* TMFunPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFunPageViewController.h; sourceTree = "<group>"; };
-		9A5DB2E91EDF04D2001C1B8F /* TMFunPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMFunPageViewController.m; sourceTree = "<group>"; };
 		9A7FFF3C1EDEBE420084C772 /* TimeManagerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7FFF401EDEBE420084C772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A7FFF421EDEBE420084C772 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		9A7FFF761EDEC1280084C772 /* TM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TM-Prefix.pch"; sourceTree = "<group>"; };
 		9AF45E401EDECA6F00C92B4D /* TMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMHomeViewController.h; sourceTree = "<group>"; };
 		9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomeViewController.m; sourceTree = "<group>"; };
+		A64B99DC1EE07D7D000ECB5A /* TMFunPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFunPageViewController.h; sourceTree = "<group>"; };
+		A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMFunPageViewController.m; sourceTree = "<group>"; };
 		A67E34F61EE028240008EAF0 /* TMSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignView.h; sourceTree = "<group>"; };
 		A67E34F71EE028240008EAF0 /* TMSignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignView.m; sourceTree = "<group>"; };
 		A67E34FC1EE028FC0008EAF0 /* TMSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignViewController.h; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		9A5DB2EC1EDF04E5001C1B8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A5DB2E81EDF04D2001C1B8F /* TMFunPageViewController.h */,
-				9A5DB2E91EDF04D2001C1B8F /* TMFunPageViewController.m */,
+				A64B99DC1EE07D7D000ECB5A /* TMFunPageViewController.h */,
+				A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -589,12 +589,12 @@
 			files = (
 				9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */,
 				A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */,
-				9A5DB2EA1EDF04D2001C1B8F /* TMFunPageViewController.m in Sources */,
 				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
 				9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */,
 				9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */,
 				A67E34F81EE028240008EAF0 /* TMSignView.m in Sources */,
 				9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */,
+				A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

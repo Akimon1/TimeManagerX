@@ -173,7 +173,7 @@
 
 //注册页面的空间都添加到contentScrollView
 - (void) initSignUpView {
-
+    
 }
 
 #pragma mark -- scrollView代理方法
