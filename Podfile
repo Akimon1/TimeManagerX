@@ -11,6 +11,8 @@ target 'TimeManagerX' do
     pod 'SDWebImage'
     pod 'SIAlertView'
     pod 'SDCycleScrollView'
+    pod 'MTCardLayout'
+    pod 'BmobSDK'
     #Reveal 软件框架
     pod 'Reveal-SDK', :configurations => ['Debug']
   target 'TimeManagerXTests' do
