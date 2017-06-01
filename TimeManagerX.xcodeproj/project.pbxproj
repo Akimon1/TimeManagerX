@@ -117,17 +117,9 @@
 		9A5DB2E41EDF0499001C1B8F /* fun */ = {
 			isa = PBXGroup;
 			children = (
-				9A5DB2EB1EDF04D8001C1B8F /* View */,
 				9A5DB2EC1EDF04E5001C1B8F /* Controller */,
 			);
 			name = fun;
-			sourceTree = "<group>";
-		};
-		9A5DB2EB1EDF04D8001C1B8F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		9A5DB2EC1EDF04E5001C1B8F /* Controller */ = {
