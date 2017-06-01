@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TMHomeViewController.h"
-
+#import "TMSignViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -29,10 +29,7 @@
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:19.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
     
-    //如要测试你所写的UIViewController, 只需要修改TMHomeViewController为你自己的ViewController类
-    //为避免git冲突，测试完毕后请务必修改恢复为TMHomeViewController。
-    //不要尝试修改除了TMHomeViewController以外的任何一个词，哪怕空格换行。谢谢。
-    self.window.rootViewController = [[TMHomeViewController alloc] init];
+    self.window.rootViewController = [[TMSignViewController alloc] init];
     [self.window makeKeyAndVisible];
 
     return YES;

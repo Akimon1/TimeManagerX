@@ -20,6 +20,8 @@
 		9A7FFF5D1EDEBE420084C772 /* TimeManagerXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF5C1EDEBE420084C772 /* TimeManagerXTests.m */; };
 		9A7FFF681EDEBE420084C772 /* TimeManagerXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */; };
 		9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */; };
+		A67E34F81EE028240008EAF0 /* TMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E34F71EE028240008EAF0 /* TMSignView.m */; };
+		A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */; };
 		C96C98E97747858B4766271D /* libPods-TimeManagerX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */; };
 		F86944FD74551BACE9DBB01E /* libPods-TimeManagerXUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,10 @@
 		9A7FFF761EDEC1280084C772 /* TM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TM-Prefix.pch"; sourceTree = "<group>"; };
 		9AF45E401EDECA6F00C92B4D /* TMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMHomeViewController.h; sourceTree = "<group>"; };
 		9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomeViewController.m; sourceTree = "<group>"; };
+		A67E34F61EE028240008EAF0 /* TMSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignView.h; sourceTree = "<group>"; };
+		A67E34F71EE028240008EAF0 /* TMSignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignView.m; sourceTree = "<group>"; };
+		A67E34FC1EE028FC0008EAF0 /* TMSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignViewController.h; sourceTree = "<group>"; };
+		A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignViewController.m; sourceTree = "<group>"; };
 		B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerXUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9041318A69B7496B12130B2 /* Pods-TimeManagerXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,10 +178,11 @@
 		9A7FFF3E1EDEBE420084C772 /* TimeManagerX */ = {
 			isa = PBXGroup;
 			children = (
+				A67E34F31EE027C30008EAF0 /* Sign登陆in注册up页面 */,
 				9A5DB2E41EDF0499001C1B8F /* fun */,
 				9A5DB2E31EDF0492001C1B8F /* 列表 */,
 				9AF45E3A1EDEC9E600C92B4D /* 首页 */,
-				9A7FFF751EDEBE600084C772 /* Model */,
+				9A7FFF751EDEBE600084C772 /* TMModel */,
 				9A7FFF4E1EDEBE420084C772 /* Assets.xcassets */,
 				9A7FFF3F1EDEBE420084C772 /* Supporting Files */,
 			);
@@ -214,12 +221,12 @@
 			path = TimeManagerXUITests;
 			sourceTree = "<group>";
 		};
-		9A7FFF751EDEBE600084C772 /* Model */ = {
+		9A7FFF751EDEBE600084C772 /* TMModel */ = {
 			isa = PBXGroup;
 			children = (
 				9A7FFF4B1EDEBE420084C772 /* TimeManagerX.xcdatamodeld */,
 			);
-			name = Model;
+			name = TMModel;
 			sourceTree = "<group>";
 		};
 		9AF45E3A1EDEC9E600C92B4D /* 首页 */ = {
@@ -245,6 +252,33 @@
 				9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */,
 				9A5DB2E01EDF0484001C1B8F /* TMHomePageViewController.h */,
 				9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A67E34F31EE027C30008EAF0 /* Sign登陆in注册up页面 */ = {
+			isa = PBXGroup;
+			children = (
+				A67E34F51EE027F60008EAF0 /* Controller */,
+				A67E34F41EE027EC0008EAF0 /* View */,
+			);
+			name = "Sign登陆in注册up页面";
+			sourceTree = "<group>";
+		};
+		A67E34F41EE027EC0008EAF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A67E34F61EE028240008EAF0 /* TMSignView.h */,
+				A67E34F71EE028240008EAF0 /* TMSignView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A67E34F51EE027F60008EAF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A67E34FC1EE028FC0008EAF0 /* TMSignViewController.h */,
+				A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -554,10 +588,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */,
+				A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */,
 				9A5DB2EA1EDF04D2001C1B8F /* TMFunPageViewController.m in Sources */,
 				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
 				9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */,
 				9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */,
+				A67E34F81EE028240008EAF0 /* TMSignView.m in Sources */,
 				9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
 			);

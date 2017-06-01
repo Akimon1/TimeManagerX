@@ -23,6 +23,8 @@
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define kStatusHeight ([[UIApplication sharedApplication] statusBarFrame].size.height)
 
+
+
 // Color
 #define kStatus_bar_Color [UIColor colorWithRed:30/255.0 green:144/255.0 blue:255/255.0 alpha:1]
 #define kTitle_bar_Color [UIColor colorWithRed:0/255.0 green:207/255.0 blue:255/255.0 alpha:1]
