@@ -14,16 +14,18 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - SDAutoLayout (2.1.7)
-  - SDCycleScrollView (1.65):
-    - SDWebImage (~> 3.7)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - Reveal-SDK (8)
+  - SDAutoLayout (2.1.8)
+  - SDCycleScrollView (1.66):
+    - SDWebImage (~> 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SIAlertView (1.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - Reveal-SDK
   - SDAutoLayout
   - SDCycleScrollView
   - SDWebImage
@@ -31,11 +33,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
-  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Reveal-SDK: 43be4e662864e937960d0d04d005135e29c4e53b
+  SDAutoLayout: 5a4b48d6b8a5172ae8d088d2879e40dd795e6251
+  SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
 
-PODFILE CHECKSUM: 874a9bf046cd9cf68fe87e92f41bca808221c430
+PODFILE CHECKSUM: 37aa9392c118d0a332c05e6096560376772dabd7
 
 COCOAPODS: 1.2.1

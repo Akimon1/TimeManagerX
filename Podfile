@@ -6,11 +6,13 @@ target 'TimeManagerX' do
   # use_frameworks!
 
   # Pods for TimeManagerX
-pod 'AFNetworking'
-pod 'SDAutoLayout'
-pod 'SDWebImage'
-pod 'SIAlertView'
-pod 'SDCycleScrollView'
+    pod 'AFNetworking'
+    pod 'SDAutoLayout'
+    pod 'SDWebImage'
+    pod 'SIAlertView'
+    pod 'SDCycleScrollView'
+    #Reveal 软件框架
+    pod 'Reveal-SDK', :configurations => ['Debug']
   target 'TimeManagerXTests' do
     inherit! :search_paths
     # Pods for testing
