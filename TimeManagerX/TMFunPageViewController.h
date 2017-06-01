@@ -10,6 +10,7 @@
 
 @interface TMFunPageViewController : UIViewController
 
+@property (nonatomic,strong) UIImageView *backgroundImageView;
 @property(nonatomic,strong) UIImageView *topImageView;
 @property(nonatomic,strong) UIButton *MYSTUButton;
 @property(nonatomic,strong) UIButton *netWorkButton;

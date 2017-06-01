@@ -13,6 +13,8 @@
 @property (nonatomic,strong) UIView *topMainView;
 @property (nonatomic,strong) UIScrollView *contentScrollView;
 
+
+
 -(instancetype)initWithFrame:(CGRect)frame;
 
 @end

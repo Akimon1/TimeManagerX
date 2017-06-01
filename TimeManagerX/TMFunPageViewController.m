@@ -15,6 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupBackground];
     [self setupFunPage];
     [self setupTopImageView];
     [self setupButton];
@@ -27,6 +28,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setupBackground{
+    _backgroundImageView = [UIImageView new];
+    _backgroundImageView.image = [UIImage imageNamed:@"登录注册背景.png"];
+    [self.view addSubview:_backgroundImageView];
+    
+    _backgroundImageView.sd_layout
+    .spaceToSuperView(UIEdgeInsetsMake(0, 0, 0, 0));
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 -(void)setupFunPage{
     //背景颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -35,6 +46,7 @@
 -(void)setupTopImageView{
     _topImageView = [UIImageView new];
     [self.view addSubview:_topImageView];
+    _topImageView.backgroundColor = [UIColor clearColor];
     _topImageView.image = [UIImage imageNamed:@"funImageView"];
     _topImageView.sd_layout
     .heightIs(SCREEN_HEIGHT*0.1)
@@ -223,6 +235,7 @@
 -(void)setupBottomLabel{
     _bottomLabel = [UILabel new];
     [self.view addSubview:_bottomLabel];
+    _bottomLabel.backgroundColor = [UIColor clearColor];
     _bottomLabel.text = @"HAVE  FUN!";
     _bottomLabel.textAlignment = NSTextAlignmentCenter; //字体居中
     _bottomLabel.font = [UIFont systemFontOfSize:16];//字体大小

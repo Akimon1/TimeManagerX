@@ -12,9 +12,9 @@
 
 @property (nonatomic,strong) UIScrollView *topScrollView;
 @property (nonatomic,strong) UIView *slideView;
-
 @property (nonatomic,strong) UIView *signInView; //登陆View
 @property (nonatomic,strong) UIView *signUpView; //注册View
+
 @end
 
 @implementation TMSignView
