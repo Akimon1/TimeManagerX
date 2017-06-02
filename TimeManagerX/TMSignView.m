@@ -15,6 +15,19 @@
 @property (nonatomic,strong) UIView *signInView; //登陆View
 @property (nonatomic,strong) UIView *signUpView; //注册View
 
+
+//需要提取数据的空间，登录页面(无后缀表示登录)
+@property (nonatomic,strong) UITextField *usernameTextField;
+@property (nonatomic,strong) UITextField *passwordTextField;
+@property (nonatomic,strong) UIButton *signInBtn;
+
+
+//需要提取数据的控件，注册页面(2后缀表示注册)
+@property (nonatomic,strong) UITextField *usernameTextField2;
+@property (nonatomic,strong) UITextField *passwordTextField2;
+@property (nonatomic,strong) UITextField *emailTextField2;
+@property (nonatomic,strong) UIButton *signUpBtn;
+
 @end
 
 @implementation TMSignView
@@ -27,6 +40,7 @@
     [self initContentScrollView];
     [self initSignInView];
     [self initSignUpView];
+    [self configTextFields:@[_usernameTextField, _passwordTextField, _usernameTextField2, _passwordTextField2, _emailTextField2]];
     
     return self;
 }
@@ -50,7 +64,7 @@
     
     //这个小横条需要响应操作setContentOffset
     _slideView = [[UIView alloc] initWithFrame:CGRectMake(0, TOPHEIGHT - 3, HALFWIDTH, 3)];
-    [_slideView setBackgroundColor:[UIColor redColor]];
+    [_slideView setBackgroundColor:[UIColor blueColor]];
     [_topScrollView addSubview:_slideView];
     
     
@@ -82,98 +96,113 @@
     
 }
 
-- (void) touchButton: (id) sender {
-    UIButton *button = sender;
-    [_contentScrollView setContentOffset:CGPointMake(button.tag * SCREEN_WIDTH, 0) animated:YES];
-    
-}
-
 
 #pragma mark -- 下部内容相关
 - (void) initContentScrollView {
     _contentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 140, SCREEN_WIDTH, SCREEN_HEIGHT*0.6)];
     _contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2, SCREEN_HEIGHT*0.6);
     _contentScrollView.backgroundColor = [UIColor clearColor];
-    
+    _contentScrollView.showsHorizontalScrollIndicator = NO;
     _contentScrollView.pagingEnabled = YES;
     _contentScrollView.delegate = self;
     [self addSubview:_contentScrollView];
-    
 }
 
 //登录页面的空间都添加到contentScrollView
 - (void) initSignInView {
-    UILabel *usernameLabel = [UILabel new];
+    CGFloat widthOfLabel = SCREEN_WIDTH / 3 * 2;
+    CGFloat spaceToLeft = (SCREEN_WIDTH - widthOfLabel) / 2;
+    
+    UILabel *usernameLabel = [[UILabel alloc]initWithFrame:CGRectMake(spaceToLeft, 40, widthOfLabel, 30)];
     usernameLabel.text = @"USERNAME";
     usernameLabel.font = [UIFont systemFontOfSize:15];
     usernameLabel.backgroundColor = [UIColor clearColor];
     
-    UILabel *passwordLabel = [UILabel new];
+    UILabel *passwordLabel = [[UILabel alloc] initWithFrame:CGRectMake(spaceToLeft, 120, widthOfLabel, 30)];
     passwordLabel.text = @"PASSWORD";
     passwordLabel.font = [UIFont systemFontOfSize:15];
     passwordLabel.backgroundColor = [UIColor clearColor];
     
     
-    UITextField *usernameTextField = [UITextField new];
-    usernameTextField.borderStyle = UITextBorderStyleRoundedRect;
-    usernameTextField.backgroundColor = [UIColor clearColor];
-    usernameTextField.delegate = self;
+    _usernameTextField = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 70, widthOfLabel, 40)];
     
-    UITextField *passwordTextField = [UITextField new];
-    passwordTextField.borderStyle = UITextBorderStyleRoundedRect;
-    passwordTextField.backgroundColor = [UIColor clearColor];
-    passwordTextField.secureTextEntry = YES;
-    passwordTextField.delegate = self;
+    _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 150, widthOfLabel, 40)];
+    _passwordTextField.secureTextEntry = YES;
     
-    UIButton *signInBtn = [UIButton new];
-    signInBtn.layer.cornerRadius = 3;
-    signInBtn.layer.masksToBounds = YES;
-    signInBtn.titleLabel.font = [UIFont boldSystemFontOfSize:20];
-    [signInBtn setTitle:@"SIGN IN" forState:UIControlStateNormal];
-    [signInBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [signInBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
-    signInBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    _signInBtn = [[UIButton alloc] initWithFrame:CGRectMake(spaceToLeft, 300, widthOfLabel, 40)];
+    _signInBtn.layer.cornerRadius = 3;
+    _signInBtn.layer.masksToBounds = YES;
+    _signInBtn.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    [_signInBtn setTitle:@"SIGN IN" forState:UIControlStateNormal];
+    [_signInBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_signInBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
+    _signInBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 
-    [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, usernameTextField, passwordTextField, signInBtn]];
+    [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, _usernameTextField, _passwordTextField, _signInBtn]];
     
-    CGFloat widthOfLabel = SCREEN_WIDTH / 3 * 2;
-    CGFloat spaceToLeft = (SCREEN_WIDTH - widthOfLabel) / 2;
-    
-    usernameLabel.sd_layout
-    .widthIs(widthOfLabel)
-    .autoHeightRatio(0)
-    .topSpaceToView(_contentScrollView, 50)
-    .leftSpaceToView(_contentScrollView, spaceToLeft + 4);
-    
-    usernameTextField.sd_layout
-    .widthIs(widthOfLabel)
-    .heightIs(40)
-    .topSpaceToView(usernameLabel, 10)
-    .leftSpaceToView(_contentScrollView, spaceToLeft);
-    
-    passwordLabel.sd_layout
-    .widthIs(widthOfLabel)
-    .autoHeightRatio(0)
-    .topSpaceToView(usernameTextField, 17)
-    .leftSpaceToView(_contentScrollView, spaceToLeft + 4);
-    
-    passwordTextField.sd_layout
-    .widthIs(widthOfLabel)
-    .heightIs(40)
-    .topSpaceToView(passwordLabel, 10)
-    .leftSpaceToView(_contentScrollView, spaceToLeft);
-    
-    signInBtn.sd_layout
-    .widthIs(widthOfLabel)
-    .heightIs(40)
-    .topSpaceToView(passwordTextField, 35)
-    .leftSpaceToView(_contentScrollView, spaceToLeft);
-
 }
+
 
 //注册页面的空间都添加到contentScrollView
 - (void) initSignUpView {
+
+    //真他妈惨，自动布局在scrollView不可见部分不能使用。要用CGRect一个个填写。
+    CGFloat widthOfLabel = SCREEN_WIDTH / 3 * 2;
+    CGFloat spaceToLeft = (SCREEN_WIDTH - widthOfLabel) / 2 + SCREEN_WIDTH;
     
+    UILabel *usernameLabel = [[UILabel alloc]initWithFrame:CGRectMake(spaceToLeft, 40, widthOfLabel, 30)];
+    usernameLabel.text = @"USERNAME";
+    usernameLabel.font = [UIFont systemFontOfSize:15];
+    usernameLabel.backgroundColor = [UIColor clearColor];
+    
+    UILabel *passwordLabel = [[UILabel alloc] initWithFrame:CGRectMake(spaceToLeft, 120, widthOfLabel, 30)];
+    passwordLabel.text = @"PASSWORD";
+    passwordLabel.font = [UIFont systemFontOfSize:15];
+    passwordLabel.backgroundColor = [UIColor clearColor];
+    
+    UILabel *emailLabel = [[UILabel alloc] initWithFrame:CGRectMake(spaceToLeft, 200, widthOfLabel, 30)];
+    emailLabel.text = @"EMAIL";
+    emailLabel.font = [UIFont systemFontOfSize:15];
+    emailLabel.backgroundColor = [UIColor clearColor];
+    
+    _usernameTextField2 = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 70, widthOfLabel, 40)];
+
+    _passwordTextField2 = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 150, widthOfLabel, 40)];
+    _passwordTextField2.secureTextEntry = YES;
+    
+    _emailTextField2 = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 230, widthOfLabel, 40)];
+    
+    _signUpBtn = [[UIButton alloc] initWithFrame:CGRectMake(spaceToLeft, 300, widthOfLabel, 40)];
+    _signUpBtn.layer.cornerRadius = 3;
+    _signUpBtn.layer.masksToBounds = YES;
+    _signUpBtn.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    [_signUpBtn setTitle:@"SIGN UP" forState:UIControlStateNormal];
+    [_signUpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_signUpBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
+    _signUpBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    
+    [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, emailLabel, _usernameTextField2, _passwordTextField2, _emailTextField2, _signUpBtn]];
+}
+
+#pragma mark -- 配置TextField方法
+- (void) configTextFields:(NSArray *)textFields {
+    for(int i=0; i<textFields.count; i++){
+        UITextField *textField = textFields[i];
+        textField.delegate = self;
+        textField.layer.cornerRadius = 15;
+        textField.layer.masksToBounds = YES;
+        textField.layer.borderWidth = 1.0f;
+        textField.backgroundColor = [UIColor clearColor];
+        textField.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 15, 0)];
+        //设置显示模式为永远显示(默认不显示)
+        textField.leftViewMode = UITextFieldViewModeAlways;
+    }
+}
+
+#pragma mark -- 事件方法
+- (void) touchButton: (id) sender {
+    UIButton *button = sender;
+    [_contentScrollView setContentOffset:CGPointMake(button.tag * SCREEN_WIDTH, 0) animated:YES];
 }
 
 #pragma mark -- scrollView代理方法
