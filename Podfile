@@ -14,6 +14,7 @@ target 'TimeManagerX' do
     pod 'MTCardLayout'
     pod 'BmobSDK'
     pod 'pop'
+    pod 'IQKeyboardManager'
     #Reveal 软件框架
     pod 'Reveal-SDK', :configurations => ['Debug']
   target 'TimeManagerXTests' do

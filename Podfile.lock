@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - BmobSDK (2.1.7)
+  - IQKeyboardManager (4.0.10)
   - MTCardLayout (1.0.3)
   - pop (1.0.9)
   - Reveal-SDK (8)
@@ -29,6 +30,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - BmobSDK
+  - IQKeyboardManager
   - MTCardLayout
   - pop
   - Reveal-SDK
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BmobSDK: 23cbfbde2a7cfaeb0c8a946953a266fe5211e7f6
+  IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
   MTCardLayout: 3baf5ac3bd21e6149b561dd7bca708f1ceccf962
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Reveal-SDK: 43be4e662864e937960d0d04d005135e29c4e53b
@@ -48,6 +51,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
 
-PODFILE CHECKSUM: c795e17b282a0f808f5e3bd5b5fe7872880fbd0d
+PODFILE CHECKSUM: 1e340d47a1b94efc53fddee1105042ba880ec136
 
 COCOAPODS: 1.2.1
