@@ -9,7 +9,8 @@
 #import "TMHomePageViewController.h"
 
 @interface TMHomePageViewController ()
-
+@property (nonatomic,strong) UIBarButtonItem *leftButton;
+@property (nonatomic,strong) UIBarButtonItem *rightButton;
 @end
 
 @implementation TMHomePageViewController
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      [self setupHomePage];
+    [self setTheLeftButton];
+    [self setTheRightButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +30,20 @@
 -(void)setupHomePage{
     //背景颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
+}
+
+-(void)setTheLeftButton{                                                                     //设置导航栏左按钮
+    _leftButton = [[UIBarButtonItem alloc]initWithTitle:@"左" style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    self.navigationItem.leftBarButtonItem = _leftButton;
+}
+-(void)leftAction{
+}
+
+-(void)setTheRightButton{                                                                     //设置导航栏右按钮
+    _rightButton = [[UIBarButtonItem alloc]initWithTitle:@"右" style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    self.navigationItem.rightBarButtonItem = _rightButton;
+}
+-(void)rightAction{
 }
 
 @end

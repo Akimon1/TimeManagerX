@@ -29,7 +29,7 @@
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:19.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
     
-    self.window.rootViewController = [[TMSignViewController alloc] init];
+    self.window.rootViewController = [[TMHomeViewController alloc] init];
     [self.window makeKeyAndVisible];
 
     return YES;

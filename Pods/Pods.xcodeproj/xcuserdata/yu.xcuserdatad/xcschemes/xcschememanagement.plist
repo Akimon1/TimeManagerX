@@ -65,6 +65,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -108,6 +113,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>775C2030BE8C145F051E70DCA2259C71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FCC29D8610A45DDEF838E0B452274BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9AF7ABBA80C6C33017342D2B472A44AA</key>
 		<dict>
 			<key>primary</key>
@@ -123,7 +138,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A2AA3328FD0812B64EBAF10E457586BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A422EA51F754F76BC750BFAC0FD35C5F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A958D08880CB2E54BD2487A86BDBC8B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,7 +158,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D1542E6974E61E691CD4AA659E3CFBFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ECFA2643F43620AC262AC4B72A26771F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE3AE40ADAC02FB297FBEA330DEF4325</key>
 		<dict>
 			<key>primary</key>
 			<true/>

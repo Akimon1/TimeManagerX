@@ -20,6 +20,7 @@
 @property (nonatomic,strong) UINavigationController *listPageNavigationController;
 @property (nonatomic,strong) UINavigationController *funPageNavigationController;
 
+
 @end
 
 @implementation TMHomeViewController
@@ -27,6 +28,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:nil];
     [self setupHomeView];
+
     
 }
 
@@ -54,6 +56,7 @@
     _funPageNavigationController.tabBarItem.title = @"Fun";
     _funPageNavigationController.tabBarItem.image = [UIImage imageNamed:@"funicon"];
     _homeViewController.viewControllers = @[_homePageNavigationController,_listPageNavigationController,_funPageNavigationController];
+    
     [self presentViewController:_homeViewController animated:true completion:nil];
 }
 
