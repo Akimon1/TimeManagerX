@@ -32,7 +32,7 @@
 
 
 -(void)setupSignView{
-    _signView = [[TMSignView alloc]initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, SCREEN_HEIGHT-200)];
+    _signView = [[TMSignView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT*3/14, SCREEN_WIDTH, SCREEN_HEIGHT-200)];
     [self.view addSubview:_signView];
 }
 
@@ -43,7 +43,7 @@
     [self.view addSubview:_forgetPwdBtn];
     
     _forgetPwdBtn.sd_layout
-    .topSpaceToView(_signView, 40)
+    .yIs(SCREEN_HEIGHT-40)
     .leftSpaceToView(self.view, 0)
     .rightSpaceToView(self.view, 0)
     .autoHeightRatio(0);
