@@ -16,18 +16,6 @@
 @property (nonatomic,strong) UIView *signUpView; //注册View
 
 
-//需要提取数据的空间，登录页面(无后缀表示登录)
-@property (nonatomic,strong) UITextField *usernameTextField;
-@property (nonatomic,strong) UITextField *passwordTextField;
-@property (nonatomic,strong) UIButton *signInBtn;
-
-
-//需要提取数据的控件，注册页面(2后缀表示注册)
-@property (nonatomic,strong) UITextField *usernameTextField2;
-@property (nonatomic,strong) UITextField *passwordTextField2;
-@property (nonatomic,strong) UITextField *emailTextField2;
-@property (nonatomic,strong) UIButton *signUpBtn;
-
 @end
 
 @implementation TMSignView
@@ -137,11 +125,42 @@
     [_signInBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_signInBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
     _signInBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    [_signInBtn addTarget:self action:@selector(signInWhenTouch:) forControlEvents:UIControlEventTouchUpInside];
 
     [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, _usernameTextField, _passwordTextField, _signInBtn]];
     
 }
 
+- (void) signInWhenTouch :(id) sender{
+    if([_signInBtn isEqual:sender]){
+        NSString *usernameInField = _usernameTextField.text;
+        NSString *passwordInField = _passwordTextField.text;
+        [BmobUser loginWithUsernameInBackground:usernameInField password:passwordInField block:^(BmobUser *user, NSError *error) {
+            if(user){
+                NSLog(@"%@",user);
+            }else{
+                NSLog(@"login failed");
+                //需要继续操作，当前用户不存在／密码不正确。
+            }
+        }];
+    }
+}
+
+- (void) signUpWhenTouch :(id) sender{
+    if([_signUpBtn isEqual:sender]){
+        BmobUser *bUser = [[BmobUser alloc] init];
+        [bUser setUsername:_usernameTextField2.text];
+        [bUser setPassword:_passwordTextField2.text];
+        [bUser setEmail:_emailTextField2.text];
+        [bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error){
+            if(isSuccessful){
+                NSLog(@"signup successed");
+            }else{
+                NSLog(@"%@",error);
+            }
+        }];
+    }
+}
 
 //注册页面的空间都添加到contentScrollView
 - (void) initSignUpView {
@@ -180,6 +199,7 @@
     [_signUpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_signUpBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
     _signUpBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    [_signUpBtn addTarget:self action:@selector(signUpWhenTouch:) forControlEvents:UIControlEventTouchUpInside];
     
     [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, emailLabel, _usernameTextField2, _passwordTextField2, _emailTextField2, _signUpBtn]];
 }
