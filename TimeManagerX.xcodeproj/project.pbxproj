@@ -237,16 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				9AF45E3C1EDECA0C00C92B4D /* Controller */,
-				9AF45E3B1EDEC9FC00C92B4D /* View */,
 			);
 			name = "首页";
-			sourceTree = "<group>";
-		};
-		9AF45E3B1EDEC9FC00C92B4D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		9AF45E3C1EDECA0C00C92B4D /* Controller */ = {

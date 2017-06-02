@@ -9,8 +9,7 @@
 #import "TMHomePageViewController.h"
 
 @interface TMHomePageViewController ()
-@property (nonatomic,strong) UIBarButtonItem *leftButton;
-@property (nonatomic,strong) UIBarButtonItem *rightButton;
+
 @end
 
 @implementation TMHomePageViewController
@@ -33,10 +32,12 @@
 }
 
 -(void)setTheLeftButton{                                                                     //设置导航栏左按钮
-    _leftButton = [[UIBarButtonItem alloc]initWithTitle:@"左" style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    _leftButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"person"] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
     self.navigationItem.leftBarButtonItem = _leftButton;
 }
 -(void)leftAction{
+    _personViewController = [TMPersonalViewController new];
+    [self.navigationController pushViewController:_personViewController  animated:true];
 }
 
 -(void)setTheRightButton{                                                                     //设置导航栏右按钮
