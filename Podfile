@@ -13,6 +13,7 @@ target 'TimeManagerX' do
     pod 'SDCycleScrollView'
     pod 'MTCardLayout'
     pod 'BmobSDK'
+    pod 'pop'
     #Reveal 软件框架
     pod 'Reveal-SDK', :configurations => ['Debug']
   target 'TimeManagerXTests' do
