@@ -7,6 +7,7 @@
 //
 
 #import "TMSignView.h"
+#import "TMHomeViewController.h"
 
 @interface TMSignView() <UIScrollViewDelegate, UITextFieldDelegate>
 
@@ -14,7 +15,7 @@
 @property (nonatomic,strong) UIView *slideView;
 @property (nonatomic,strong) UIView *signInView; //登陆View
 @property (nonatomic,strong) UIView *signUpView; //注册View
-
+@property (nonatomic,strong) UIViewController *myViewController;
 
 @end
 
@@ -138,6 +139,12 @@
         [BmobUser loginWithUsernameInBackground:usernameInField password:passwordInField block:^(BmobUser *user, NSError *error) {
             if(user){
                 NSLog(@"%@",user);
+                //登陆成功跳转页面
+                _myViewController = [self getCurrentViewController:self];
+                NSLog(@"%@",NSStringFromClass([_myViewController class]));
+                TMHomeViewController *homeVC = [TMHomeViewController new];
+                [_myViewController presentViewController:homeVC animated:true completion:nil];
+                
             }else{
                 NSLog(@"login failed");
                 //需要继续操作，当前用户不存在／密码不正确。
@@ -219,6 +226,7 @@
     }
 }
 
+
 #pragma mark -- 事件方法
 - (void) touchButton: (id) sender {
     UIButton *button = sender;
@@ -238,6 +246,19 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
+}
+
+- (UIViewController *)getCurrentViewController:(UIView *) currentView
+{
+    for (UIView* next = [currentView superview]; next; next = next.superview)
+    {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]])
+        {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
 }
 
 @end
