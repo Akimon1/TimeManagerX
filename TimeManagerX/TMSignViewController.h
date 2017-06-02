@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TMSignView.h"
+#import "BmobSDK/Bmob.h"
+#import "BmobSDK/BmobUser.h"
 
 @interface TMSignViewController : UIViewController
 

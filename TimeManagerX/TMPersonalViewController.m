@@ -8,6 +8,7 @@
 
 #import "TMPersonalViewController.h"
 
+
 @interface TMPersonalViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
@@ -18,7 +19,6 @@
     [super viewDidLoad];
     [self setupPersonView];
     [self setTableViewer];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +32,7 @@
 
 -(void)setTableViewer{                                                                  //设置tableView界面
     //tableView相关内容，包括headerView
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*0.025, 0, SCREEN_WIDTH*0.95, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     [_tableView setDelegate:self];
     [_tableView setDataSource:self];
     _tableView.scrollEnabled =NO; //设置tableview 不能滚动
@@ -61,18 +61,28 @@
     _tableView.tableHeaderView = _headerView;
     _tableView.estimatedRowHeight = 100;
     _tableView.rowHeight = UITableViewAutomaticDimension;
+    _tableView.sectionFooterHeight = 5;
     [self.view addSubview:_tableView];
     
 }
+
 #pragma mark - tableview Delegate
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 10;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_HEIGHT*0.1;
+    return SCREEN_HEIGHT*0.08;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,6 +99,38 @@
         // 初始化
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier: cellIdentifier];
     }
+    _userNameDefault = @"用户名:";
+    _userIDDefault = @"ID:";
+    BmobUser *bUser = [BmobUser currentUser];
+    if (bUser) {
+        _getUserName = bUser.username;
+        _getID = bUser.objectId;
+    }
+    _userName = [_userNameDefault stringByAppendingString:_getUserName];
+    _ID = [_userIDDefault stringByAppendingString:_getID];
+    switch (indexPath.section) {
+        case 0:
+            [[cell textLabel]  setText:_userName];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            break;
+        case 1:
+            [[cell textLabel]  setText:_ID];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            break;
+        case 2:
+            [[cell textLabel]  setText:@"关于我们"];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            break;
+        case 3:
+            [[cell textLabel]  setText:@"注销"];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            break;
+        default:
+            [[cell textLabel]  setText:@""];
+            break;
+    }
+    cell.layer.cornerRadius = 10;
+    cell.layer.masksToBounds = YES;
     //设置cell颜色透明
     cell.backgroundColor=[UIColor whiteColor];
     //设置cell选中时为无色
@@ -96,9 +138,42 @@
     
     return cell;
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+-(void)aboutWE{
+    _alertController = [UIAlertController alertControllerWithTitle:@"关于我们" message:@"FormTeam:TimeManager.stu\n LIN&DJ&JT" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [_alertController addAction:ok];
+    [self presentViewController:_alertController animated:YES completion:nil];
 }
+
+-(void)logOut{
+    _alertController = [UIAlertController alertControllerWithTitle:@"确定注销？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [BmobUser logout];
+        _signViewController = [TMSignViewController new];
+        [self presentViewController:_signViewController animated:true completion:nil];
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [_alertController addAction:ok];
+    [_alertController addAction:cancel];
+    [self presentViewController:_alertController animated:YES completion:nil];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.section) {
+        case 2:
+            [self aboutWE];
+            break;
+        case 3:
+            [self logOut];
+            break;
+        default:
+            break;
+    }
+
+}
+
+
 
 
 @end

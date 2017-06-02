@@ -13,12 +13,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setupBackground];
-    [self setupSignView];
-    [self setupForgetPwdBtn];
+    [self ifLogin];
 }
 
+-(void)ifLogin{
+    BmobUser *bUser = [BmobUser currentUser];
+    if(bUser != nil){
+        
+    }else{
+        [self setupBackground];
+        [self setupSignView];
+        [self setupForgetPwdBtn];
+    }
+}
 
 -(void)setupBackground{
     _backgroundImageView = [UIImageView new];
