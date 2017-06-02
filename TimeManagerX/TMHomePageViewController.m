@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     [self setupHomePage];
+    [self setupHomePage];
+    [self setupPlanView];
     [self setTheLeftButton];
     [self setTheRightButton];
 }
@@ -24,6 +25,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
+}
+
+-(void)setupPlanView{
+    NSLog(@"begin to init planview");
+    _planView = [[TMPlanView alloc] init];
+    [self.view addSubview:_planView];
+    
+    _planView.sd_layout
+    .topSpaceToView(self.view, SCREEN_HEIGHT/5)
+    .widthIs(SCREEN_WIDTH)
+    .bottomSpaceToView(self.view, 30);
+    
+    //设置方法让此值跟随事件变化
+    _planView.circle.progress = 0.35;
+    _planView.circle.totalTime = 25;
 }
 
 -(void)setupHomePage{
