@@ -7,19 +7,26 @@
 //
 
 #import "TMSignViewController.h"
-
+#import "TMHomeViewController.h"
 
 @implementation TMSignViewController
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:nil];
+    [self ifLogin];
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self ifLogin];
 }
 
 -(void)ifLogin{
     BmobUser *bUser = [BmobUser currentUser];
     if(bUser != nil){
-        
+        TMHomeViewController *homeViewController = [TMHomeViewController new];
+        [self presentViewController:homeViewController animated:true completion:nil];
     }else{
         [self setupBackground];
         [self setupSignView];
