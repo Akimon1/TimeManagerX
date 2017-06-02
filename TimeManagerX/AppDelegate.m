@@ -30,7 +30,7 @@
     [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:19.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
     [Bmob registerWithAppKey:@"3d1fc089a61e9cd1449597f5887a4aa0"];
     
-    self.window.rootViewController = [[TMHomeViewController alloc] init];
+    self.window.rootViewController = [[TMSignViewController alloc] init];
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -109,6 +109,14 @@
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
+}
+
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    if(self.allowRotation){
+        //如果设置了allowRotation属性，支持全屏
+        return UIInterfaceOrientationMaskAll;
+    }
+    return UIInterfaceOrientationMaskPortrait; //默认全局不支持横屏
 }
 
 @end

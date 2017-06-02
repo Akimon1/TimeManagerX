@@ -21,6 +21,7 @@
 		9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */; };
 		A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */; };
 		A64B99E01EE13E3D000ECB5A /* TMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99DF1EE13E3D000ECB5A /* TMSignView.m */; };
+		A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99EA1EE175D8000ECB5A /* TMPersonalViewController.m */; };
 		A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */; };
 		C96C98E97747858B4766271D /* libPods-TimeManagerX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */; };
 		F86944FD74551BACE9DBB01E /* libPods-TimeManagerXUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */; };
@@ -74,6 +75,8 @@
 		A64B99DC1EE07D7D000ECB5A /* TMFunPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFunPageViewController.h; sourceTree = "<group>"; };
 		A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMFunPageViewController.m; sourceTree = "<group>"; };
 		A64B99DF1EE13E3D000ECB5A /* TMSignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignView.m; sourceTree = "<group>"; };
+		A64B99E91EE175D8000ECB5A /* TMPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPersonalViewController.h; sourceTree = "<group>"; };
+		A64B99EA1EE175D8000ECB5A /* TMPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPersonalViewController.m; sourceTree = "<group>"; };
 		A67E34F61EE028240008EAF0 /* TMSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignView.h; sourceTree = "<group>"; };
 		A67E34FC1EE028FC0008EAF0 /* TMSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignViewController.h; sourceTree = "<group>"; };
 		A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignViewController.m; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		9A7FFF3E1EDEBE420084C772 /* TimeManagerX */ = {
 			isa = PBXGroup;
 			children = (
+				A64B99E71EE175BB000ECB5A /* 个人中心 */,
 				A67E34F31EE027C30008EAF0 /* Sign登陆in注册up页面 */,
 				9A5DB2E41EDF0499001C1B8F /* fun */,
 				9A5DB2E31EDF0492001C1B8F /* 列表 */,
@@ -252,6 +256,23 @@
 				9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */,
 				9A5DB2E01EDF0484001C1B8F /* TMHomePageViewController.h */,
 				9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A64B99E71EE175BB000ECB5A /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				A64B99E81EE175C7000ECB5A /* Controller */,
+			);
+			name = "个人中心";
+			sourceTree = "<group>";
+		};
+		A64B99E81EE175C7000ECB5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A64B99E91EE175D8000ECB5A /* TMPersonalViewController.h */,
+				A64B99EA1EE175D8000ECB5A /* TMPersonalViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -596,6 +617,7 @@
 				9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */,
 				A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
+				A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
