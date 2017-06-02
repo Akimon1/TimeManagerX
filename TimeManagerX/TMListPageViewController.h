@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMListPageViewController : UIViewController
 
+@interface TMListPageViewController : UIViewController
+@property (strong, nonatomic)  UILabel *dateLabel;
+@property (strong, nonatomic)  UILabel *timeLabel;
+ 
+  
 @end
