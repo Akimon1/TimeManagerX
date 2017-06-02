@@ -47,13 +47,16 @@
     .widthIs(SCREEN_WIDTH);
     _userPhoto = [UIImageView new];
     _userPhoto.image = [UIImage imageNamed:@"userPhoto"];
-    _userPhoto.layer.cornerRadius = _userPhoto.frame.size.width / 2;;
+    _userPhoto.layer.cornerRadius = SCREEN_WIDTH*0.3;
     _userPhoto.layer.masksToBounds = YES;
+    [_headerView addSubview:_userPhoto];
     _userPhoto.sd_layout
     .heightIs(SCREEN_WIDTH*0.6)
     .widthIs(SCREEN_WIDTH*0.6)
+    .topSpaceToView(_headerView, SCREEN_WIDTH*0.05)
+    .leftSpaceToView(_headerView, SCREEN_WIDTH*0.2)
     ;
-    [_headerView addSubview:_userPhoto];
+
     
     _tableView.tableHeaderView = _headerView;
     _tableView.estimatedRowHeight = 100;

@@ -298,7 +298,9 @@
     [_webViewController.view addSubview:_webView];
     NSURLRequest* request = [NSURLRequest requestWithURL:_url];//创建NSURLRequest
     [_webView loadRequest:request];//加载
+    _webViewController.hidesBottomBarWhenPushed=YES;
     [self.navigationController pushViewController:_webViewController  animated:true];
+    self.hidesBottomBarWhenPushed=NO;
 }
 
 @end

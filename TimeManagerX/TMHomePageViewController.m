@@ -37,7 +37,9 @@
 }
 -(void)leftAction{
     _personViewController = [TMPersonalViewController new];
+    _personViewController.hidesBottomBarWhenPushed=YES;
     [self.navigationController pushViewController:_personViewController  animated:true];
+    self.hidesBottomBarWhenPushed=NO;
 }
 
 -(void)setTheRightButton{                                                                     //设置导航栏右按钮
