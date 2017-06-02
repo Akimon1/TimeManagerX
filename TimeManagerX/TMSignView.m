@@ -40,7 +40,7 @@
     CGFloat HALFWIDTH = SCREEN_WIDTH / 2;
     CGFloat TOPHEIGHT = 40;
     
-    _topMainView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, TOPHEIGHT)];
+    _topMainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TOPHEIGHT)];
     _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TOPHEIGHT)];
     _topScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, TOPHEIGHT);
     _topScrollView.showsHorizontalScrollIndicator = NO;
@@ -88,7 +88,7 @@
 
 #pragma mark -- 下部内容相关
 - (void) initContentScrollView {
-    _contentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 140, SCREEN_WIDTH, SCREEN_HEIGHT*0.6)];
+    _contentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT*0.6)];
     _contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2, SCREEN_HEIGHT*0.6);
     _contentScrollView.backgroundColor = [UIColor clearColor];
     _contentScrollView.showsHorizontalScrollIndicator = NO;
