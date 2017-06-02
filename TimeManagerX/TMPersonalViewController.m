@@ -131,9 +131,9 @@
     }
     cell.layer.cornerRadius = 10;
     cell.layer.masksToBounds = YES;
-    //设置cell颜色透明
+    //设置cell颜色白色
     cell.backgroundColor=[UIColor whiteColor];
-    //设置cell选中时为无色
+    //设置cell选中
     cell.selectionStyle=UITableViewCellSelectionStyleDefault;
     
     return cell;

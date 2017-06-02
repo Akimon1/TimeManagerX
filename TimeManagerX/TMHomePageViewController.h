@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TMPersonalViewController.h"
+#import "pop.h"
 
 @interface TMHomePageViewController : UIViewController
 @property (nonatomic,strong) UIBarButtonItem *leftButton;
 @property (nonatomic,strong) UIBarButtonItem *rightButton;
 @property (nonatomic,strong) TMPersonalViewController *personViewController;
+@property (nonatomic,strong) UIAlertController *alertController;
 @end

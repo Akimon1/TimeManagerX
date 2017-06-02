@@ -27,6 +27,7 @@
 -(void)setupListPage{
     //背景颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.navigationItem.title = @"列表";
 }
 
 @end

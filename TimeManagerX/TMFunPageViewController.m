@@ -30,7 +30,7 @@
 
 -(void)setupBackground{
     _backgroundImageView = [UIImageView new];
-    _backgroundImageView.image = [UIImage imageNamed:@"登录注册背景.png"];
+    _backgroundImageView.image = [UIImage imageNamed:@"background"];
     [self.view addSubview:_backgroundImageView];
     
     _backgroundImageView.sd_layout
@@ -41,6 +41,7 @@
 -(void)setupFunPage{
     //背景颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.navigationItem.title = @"Fun";
 }
 
 -(void)setupTopImageView{

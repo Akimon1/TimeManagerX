@@ -29,6 +29,7 @@
 -(void)setupHomePage{
     //背景颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.navigationItem.title = @"首页";
 }
 
 -(void)setTheLeftButton{                                                                     //设置导航栏左按钮
@@ -43,10 +44,14 @@
 }
 
 -(void)setTheRightButton{                                                                     //设置导航栏右按钮
-    _rightButton = [[UIBarButtonItem alloc]initWithTitle:@"右" style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    _rightButton = [[UIBarButtonItem alloc]initWithTitle:@"点一下" style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
     self.navigationItem.rightBarButtonItem = _rightButton;
 }
 -(void)rightAction{
+    _alertController = [UIAlertController alertControllerWithTitle:@"你进行了一波操作\n但什么都没有发生。" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"好的，我知道了。" style:UIAlertActionStyleDefault handler:nil];
+    [_alertController addAction:ok];
+    [self presentViewController:_alertController animated:YES completion:nil];
 }
 
 @end
