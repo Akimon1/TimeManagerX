@@ -11,6 +11,7 @@
 
 @interface TMPresentTaskViewController ()
 @property (nonatomic,strong) TMHomeViewController *homeViewVontroller;
+@property int count;
 @end
 
 @implementation TMPresentTaskViewController
@@ -20,8 +21,10 @@
     [self setupPresentTask];
     [self setTheLeftButton];
     [self setTheRightButton];
-    [self setupTimer];
+    [self setupDateTimer];
     [self setupCircle];
+    [self setupCountLabel];
+    [self setupTimeTimer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,22 +32,6 @@
 
 }
 
--(void)setupCircle {
-    
-    CGFloat margin = SCREEN_WIDTH / 6;
-    CGFloat circleWidth = SCREEN_WIDTH - margin * 2;
-    
-    _circle = [[XLCircleProgress alloc] initWithFrame:CGRectMake(0, 0,circleWidth,circleWidth)];
-    _circle.percentLabel.hidden = YES;
-    _circle.totalTimeLabel.hidden = YES;
-    [self.view addSubview:_circle];
-    
-    _circle.sd_layout
-    .topSpaceToView(self, SCREEN_HEIGHT*0.05)
-    .centerXIs(SCREEN_WIDTH/2);
-
-    
-}
 
 -(void)setupPresentTask{
     self.view.backgroundColor = [UIColor whiteColor];
@@ -76,25 +63,63 @@
     [self.navigationController pushViewController:_saveTaskViewController animated:true];
 }
 
--(void)setupTimer{
+-(void)setupDateTimer{
     _dateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(dateDisplay) userInfo:nil repeats:YES];
-    _timeTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeDisplay) userInfo:nil repeats:YES];
     _dateLabel = [UILabel new];
     [self.view addSubview:_dateLabel];
     _dateLabel.sd_layout
     .heightIs(SCREEN_HEIGHT*0.1)
     .widthIs(SCREEN_WIDTH*0.6)
-    .topSpaceToView(self, SCREEN_HEIGHT*0.1)
-    .leftSpaceToView(self, SCREEN_WIDTH*0.2);
+    .topSpaceToView(self.navigationController.navigationBar, SCREEN_HEIGHT*0.05)
+    .centerXIs(SCREEN_WIDTH/2);
+}
+
+-(void)setupCircle {
     
+    CGFloat margin = SCREEN_WIDTH / 6;
+    CGFloat circleWidth = SCREEN_WIDTH - margin * 2;
+    
+    _circle = [[XLCircleProgress alloc] initWithFrame:CGRectMake(0, 0,circleWidth,circleWidth)];
+    _circle.percentLabel.hidden = YES;
+    _circle.totalTimeLabel.hidden = YES;
+    [self.view addSubview:_circle];
+    
+    _circle.sd_layout
+    .topSpaceToView(_dateLabel, SCREEN_HEIGHT*0.05)
+    .centerXIs(SCREEN_WIDTH/2);
+}
+
+-(void)setupCountLabel{
+    _countLabel = [UILabel new];
+    [self.view addSubview:_countLabel];
+    _countLabel.textAlignment = NSTextAlignmentCenter;
+    _countLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:28];
+    _countLabel.sd_layout
+    .heightIs(SCREEN_HEIGHT*0.1)
+    .widthIs(SCREEN_WIDTH*0.6)
+    .topSpaceToView(_dateLabel, _circle.frame.size.height/2)
+    .centerXIs(SCREEN_WIDTH/2)
+    ;
+    
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc]init];
+    [timeFormatter setDateFormat:@"HH:mm:ss"];
+    _nowTime = [timeFormatter stringFromDate:[NSDate date]];
+    
+    stopWatch = [[MZTimerLabel alloc]initWithLabel:_countLabel];
+    [stopWatch start];
+    isRunning = YES;
+}
+
+-(void)setupTimeTimer{
+    _count=0;
+    _timeTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeDisplay) userInfo:nil repeats:YES];
     _timeLabel = [UILabel new];
     [self.view addSubview:_timeLabel];
     _timeLabel.sd_layout
     .heightIs(SCREEN_HEIGHT*0.1)
     .widthIs(SCREEN_WIDTH*0.6)
-    .topSpaceToView(_dateLabel, SCREEN_HEIGHT*0.025)
-    .leftSpaceToView(self, SCREEN_WIDTH*0.2);
-    
+    .topSpaceToView(_dateLabel, _circle.frame.size.height+SCREEN_HEIGHT*0.1)
+    .centerXIs(SCREEN_WIDTH/2);
 }
 
 - (void)dateDisplay {
@@ -126,6 +151,9 @@
     _timeLabel.layer.borderColor = [[UIColor grayColor]CGColor];
     _timeLabel.layer.borderWidth = 0.5f;
     _timeLabel.layer.masksToBounds = YES;
+    _count =_count+1;
+    if(_count>60)_count=1;
+    _circle.progress=_count*0.01;
 }
 
 - (NSString *)getWeekdayFromDate:(NSDate *)date {
@@ -134,5 +162,20 @@
     NSDateComponents *comps = [calendar components:NSCalendarUnitWeekday fromDate:date];
     return [weekday objectAtIndex:([comps weekday]-1)];
 }
+
+- (void)changeState{
+    if (isRunning == YES){
+        [stopWatch pause];
+        isRunning = NO;
+        [_stateButton setTitle:@"开始" forState:UIControlStateNormal];
+    }else{
+        [stopWatch start];
+        isRunning = YES;
+        [_stateButton setTitle:@"暂停" forState:UIControlStateNormal];
+    }
+}
+- (void)finish{
+}
+
 
 @end

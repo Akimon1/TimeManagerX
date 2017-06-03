@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "TMSaveTaskViewController.h"
 #import "XLCircleProgress.h"
-@interface TMPresentTaskViewController : UIViewController
+#import "MZTimerLabel.h"
+@interface TMPresentTaskViewController : UIViewController{
+    MZTimerLabel *stopWatch;
+    Boolean isRunning;
+}
 
 @property (nonatomic,strong) UIBarButtonItem *leftButton;
 @property (nonatomic,strong) UIBarButtonItem *rightButton;
@@ -21,4 +25,9 @@
 @property (strong, nonatomic)  NSTimer *timeTimer;
 //圆形图
 @property (strong, nonatomic)  XLCircleProgress *circle;
+
+@property (strong, nonatomic) UILabel *countLabel;
+@property (strong, nonatomic) UIButton *stateButton;
+@property (strong, nonatomic) NSString *nowTime;
+
 @end
