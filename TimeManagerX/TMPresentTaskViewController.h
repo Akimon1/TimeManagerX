@@ -30,4 +30,6 @@
 @property (nonatomic,strong) UIButton *stateButton;
 @property (nonatomic,strong) NSString *nowTime;
 
+@property (nonatomic,strong) NSString *passNowTime;
+@property (nonatomic,strong) NSString *passNowDate;
 @end

@@ -88,17 +88,10 @@
     self.navigationItem.rightBarButtonItem = _rightButton;
 }
 -(void)rightAction{
-    _alertController = [UIAlertController alertControllerWithTitle:@"要开始一项即时任务嘛？" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         _presentTaskViewController = [TMPresentTaskViewController new];
         _presentTaskViewController.hidesBottomBarWhenPushed=YES;
         [self.navigationController pushViewController:_presentTaskViewController animated:true];
         self.hidesBottomBarWhenPushed=NO;
-    }];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-    [_alertController addAction:ok];
-    [_alertController addAction:cancel];
-    [self presentViewController:_alertController animated:YES completion:nil];
 }
 
 @end

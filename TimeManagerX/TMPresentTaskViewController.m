@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getPassNowTimeAndDate];
     [self setupPresentTask];
     [self setTheLeftButton];
     [self setTheRightButton];
@@ -60,6 +61,9 @@
 }
 -(void)rightAction{
     _saveTaskViewController = [TMSaveTaskViewController new];
+    _saveTaskViewController.getPassNowTime = _passNowTime;
+    _saveTaskViewController.getPassNowDate = _passNowDate;
+    _saveTaskViewController.getLastTime = _countLabel.text;
     self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"放弃保存" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:_saveTaskViewController animated:true];
 }
@@ -125,14 +129,8 @@
 -(void)setupStateButton{
     _stateButton = [UIButton new];
     [self.view addSubview:_stateButton];
-    [_stateButton setTitle:@"开始" forState:UIControlStateNormal];
-    [_stateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _stateButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    _stateButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:28];
+    [_stateButton setImage:[UIImage imageNamed:@"run"] forState:UIControlStateNormal];
     _stateButton.layer.cornerRadius = SCREEN_HEIGHT*0.05;
-    _stateButton.layer.borderColor = [[UIColor blueColor]CGColor];
-    _stateButton.layer.borderWidth = 3;
-    _stateButton.layer.masksToBounds = YES;
     [_stateButton addTarget:self action:@selector(changeState) forControlEvents:UIControlEventTouchUpInside];//给button添加点击事件，action参数中写入事件执行方法
     _stateButton.sd_layout
     .heightIs(SCREEN_HEIGHT*0.1)
@@ -188,15 +186,21 @@
     if (isRunning == YES){
         [stopWatch pause];
         isRunning = NO;
-        [_stateButton setTitle:@"开始" forState:UIControlStateNormal];
-        [_stateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_stateButton setImage:[UIImage imageNamed:@"run"] forState:UIControlStateNormal];
     }else{
         [stopWatch start];
         isRunning = YES;
-        [_stateButton setTitle:@"暂停" forState:UIControlStateNormal];
-        [_stateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_stateButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
     }
 }
 
+-(void)getPassNowTimeAndDate{
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc]init];
+    [timeFormatter setDateFormat:@"HH:mm:ss"];
+    _passNowTime = [timeFormatter stringFromDate:[NSDate date]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"YYYY年MM月dd日"];
+    _passNowDate = [dateFormatter stringFromDate:[NSDate date]];
+}
 
 @end
