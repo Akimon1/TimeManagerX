@@ -44,8 +44,6 @@ static NSString *cellIdentifier = @"CellIdentifier";
     collectionView.dataSource = self;
     self.view.backgroundColor = [UIColor whiteColor];
     collectionView.backgroundColor = [UIColor grayColor];
-    collectionView.sd_layout
-    .topSpaceToView(self.view, 64);
 }
 
 #pragma mark - UICollectionViewDatasource
