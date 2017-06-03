@@ -21,6 +21,51 @@
     [self setTheLeftButton];
     [self setTheRightButton];
     [self setupToPlanDetailBtn];
+    [self setupShowPlanListBtn];
+    [self setupCreatePlanBtn];
+}
+
+-(void)setupShowPlanListBtn {
+    _showPlanListBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _showPlanListBtn.frame = CGRectMake(SCREEN_WIDTH*0.20-32, SCREEN_HEIGHT*0.15, 32, 32);
+    _showPlanListBtn.layer.cornerRadius = _createPlanBtn.frame.size.width/2;
+    _showPlanListBtn.clipsToBounds = YES;
+    
+    [_showPlanListBtn setBackgroundColor:[UIColor clearColor]];
+    [_showPlanListBtn setImage:[UIImage imageNamed:@"list"] forState:0];
+    [_showPlanListBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [_showPlanListBtn addTarget:self action:@selector(toPlanListView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_showPlanListBtn];
+}
+
+-(void)toPlanListView:(id)sender{
+    if ([_showPlanListBtn isEqual:sender]) {
+        //TODO
+    }
+}
+
+
+
+-(void)setupCreatePlanBtn {
+    _createPlanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _createPlanBtn.frame = CGRectMake(SCREEN_WIDTH*0.80, SCREEN_HEIGHT*0.15, 32, 32);
+    _createPlanBtn.layer.cornerRadius = _createPlanBtn.frame.size.width/2;
+    _createPlanBtn.clipsToBounds = YES;
+
+    [_createPlanBtn setBackgroundColor:[UIColor clearColor]];
+    [_createPlanBtn setImage:[UIImage imageNamed:@"add32"] forState:0];
+    [_createPlanBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [_createPlanBtn addTarget:self action:@selector(toCreatePlanView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_createPlanBtn];
+}
+
+-(void)toCreatePlanView:(id)sender{
+    if([_createPlanBtn isEqual:sender]){
+        _planCreateViewController = [TMPlanCreateViewController new];
+        _planCreateViewController.hidesBottomBarWhenPushed=YES;
+        [self.navigationController pushViewController:_planCreateViewController  animated:true];
+        self.hidesBottomBarWhenPushed=NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

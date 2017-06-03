@@ -8,6 +8,7 @@
 
 #import "TMPlanCreateViewController.h"
 #import "TMPlanCreateCell.h"
+#import "TMHomeViewController.h"
 @interface TMPlanCreateViewController () <UITableViewDataSource,UITableViewDelegate,UITabBarDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
@@ -58,8 +59,53 @@
     if([_finishBtn isEqual:sender]){
         //TODO
         //传输数据或者保存数据到网络
+        //往task表添加一条task_name,task_from,task_to,task_location的数据
+        BmobObject *newTask = [BmobObject objectWithClassName:@"plan"];
+        
+        //将数据与用户连接
+        BmobUser *bmobUser = [BmobUser currentUser];
+        if(bmobUser){
+            [newTask setObject:bmobUser.username      forKey:@"user_Name"];     //user
+            
+            [newTask setObject:[self planName]      forKey:@"plan_Name"];
+            [newTask setObject:[self planTime]      forKey:@"plan_time"];
+            [newTask setObject:[self planMotto]     forKey:@"plan_motto"];
+            [newTask setObject:@(0)           forKey:@"plan_pain"];
+
+            NSLog(@"%@", [self planMotto]);
+            NSLog(@"%@", [self planName]);
+            [newTask saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                if (isSuccessful) {
+                    //创建成功后会返回objectId，updatedAt，createdAt等信息
+                    //创建对象成功，打印对象值
+                    NSLog(@"%@",newTask);
+                    [KVNProgress showSuccessWithStatus:@"计划已创建"];
+                    [self presentViewController:[TMHomeViewController new] animated:true completion:nil];
+                } else if (error){
+                    //发生错误后的动作
+                    NSLog(@"%@",error);
+                    [KVNProgress showErrorWithStatus:@"保存失败，遇到了不可预知的意外呢。"];
+                } else {
+                    NSLog(@"Unknow error");
+                }
+            }];
+        }else{
+            //缓存用户对象为空时， 可打开用户注册界面…
+        }
         
     }
+}
+
+-(NSString *)planName{
+    return  self.tableView.visibleCells[0].textLabel.text;
+}
+
+-(NSString *)planTime{
+    return self.tableView.visibleCells[1].textLabel.text;
+}
+
+-(NSString *)planMotto{
+    return self.tableView.visibleCells[2].textLabel.text;
 }
 
 #pragma mark -- tableview Delegate
