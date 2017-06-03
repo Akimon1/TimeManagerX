@@ -40,10 +40,12 @@
     _headView.backgroundColor = kTitle_bar_Color;
     
     _mplanNameLabel = [UILabel new];
+    _mplanNameLabel.font = [UIFont boldSystemFontOfSize:25];
     _mplanNameLabel.textAlignment = NSTextAlignmentCenter;
     _mplanNameLabel.textColor = [UIColor whiteColor];
     
     _mmottoLabel = [UILabel new];
+    _mmottoLabel.font = [UIFont systemFontOfSize:17];
     _mmottoLabel.textAlignment = NSTextAlignmentCenter;
     _mmottoLabel.textColor = [UIColor whiteColor];
     
@@ -53,12 +55,12 @@
     _mplanNameLabel.sd_layout
     .widthIs(frame.size.width)
     .heightIs(60)
-    .topSpaceToView(_headView, 50);
+    .topSpaceToView(_headView, 70);
     
     _mmottoLabel.sd_layout
     .widthIs(frame.size.width)
     .heightIs(30)
-    .bottomSpaceToView(_headView, 40);
+    .bottomSpaceToView(_headView, 20);
     
 
 }
@@ -76,6 +78,7 @@
     UIView *goalView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, oneOfThreeWidth, frameHeight)];
     UILabel *goalLabel = [UILabel new];
     goalLabel.text = @"目标";
+    goalLabel.textColor = [UIColor grayColor];
     goalLabel.textAlignment = NSTextAlignmentCenter;
     _mgoalLabel = [UILabel new];
     _mgoalLabel.textAlignment = NSTextAlignmentCenter;
@@ -98,6 +101,7 @@
     UIView *investView = [[UIView alloc] initWithFrame:CGRectMake(oneOfThreeWidth, 0, oneOfThreeWidth, frameHeight)];
     UILabel *investLabel = [UILabel new];
     investLabel.text = @"总投入";
+    investLabel.textColor = [UIColor grayColor];
     investLabel.textAlignment = NSTextAlignmentCenter;
     _minvestLabel = [UILabel new];
     _minvestLabel.textAlignment = NSTextAlignmentCenter;
@@ -119,6 +123,7 @@
     UIView *gainView = [[UIView alloc] initWithFrame:CGRectMake(oneOfThreeWidth*2, 0, oneOfThreeWidth, frameHeight)];
     UILabel *gainLabel = [UILabel new];
     gainLabel.text = @"已获得";
+    gainLabel.textColor = [UIColor grayColor];
     gainLabel.textAlignment = NSTextAlignmentCenter;
     _mgainLabel = [UILabel new];
     _mgainLabel.textAlignment = NSTextAlignmentCenter;
