@@ -52,15 +52,9 @@
     self.navigationItem.rightBarButtonItem = _rightButton;
 }
 -(void)rightAction{
-    _alertController = [UIAlertController alertControllerWithTitle:@"保存任务？" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        _saveTaskViewController = [TMSaveTaskViewController new];
-        [self.navigationController pushViewController:_saveTaskViewController animated:true];
-    }];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-    [_alertController addAction:ok];
-    [_alertController addAction:cancel];
-    [self presentViewController:_alertController animated:YES completion:nil];
+    _saveTaskViewController = [TMSaveTaskViewController new];
+    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"放弃保存" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController pushViewController:_saveTaskViewController animated:true];
 }
 
 
