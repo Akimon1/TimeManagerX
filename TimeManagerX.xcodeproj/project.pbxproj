@@ -32,6 +32,8 @@
 		A65C0BCF1EE1DA32003B1D82 /* XLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A65C0BCD1EE1DA32003B1D82 /* XLCircleProgress.m */; };
 		A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = A67245C11EE1DC4E00CBDB45 /* TMPlanView.m */; };
 		A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */; };
+		A6AC0A941EE2ACBF0021E790 /* TMPlanCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AC0A931EE2ACBF0021E790 /* TMPlanCreateViewController.m */; };
+		A6AC0A971EE2B6A70021E790 /* TMPlanCreateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AC0A961EE2B6A70021E790 /* TMPlanCreateCell.m */; };
 		C96C98E97747858B4766271D /* libPods-TimeManagerX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */; };
 		F86944FD74551BACE9DBB01E /* libPods-TimeManagerXUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,10 @@
 		A67E34F61EE028240008EAF0 /* TMSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignView.h; sourceTree = "<group>"; };
 		A67E34FC1EE028FC0008EAF0 /* TMSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignViewController.h; sourceTree = "<group>"; };
 		A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignViewController.m; sourceTree = "<group>"; };
+		A6AC0A921EE2ACBF0021E790 /* TMPlanCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanCreateViewController.h; sourceTree = "<group>"; };
+		A6AC0A931EE2ACBF0021E790 /* TMPlanCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanCreateViewController.m; sourceTree = "<group>"; };
+		A6AC0A951EE2B6A70021E790 /* TMPlanCreateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanCreateCell.h; sourceTree = "<group>"; };
+		A6AC0A961EE2B6A70021E790 /* TMPlanCreateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanCreateCell.m; sourceTree = "<group>"; };
 		B2C3167E4BA6EBB321CC2F8C /* libPods-TimeManagerXUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerXUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9041318A69B7496B12130B2 /* Pods-TimeManagerXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF0A1A16146CC3F85BB99EB /* libPods-TimeManagerX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManagerX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +331,8 @@
 				9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */,
 				9A254FC01EE292F4008BD29F /* TMPlanDetailViewController.h */,
 				9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */,
+				A6AC0A921EE2ACBF0021E790 /* TMPlanCreateViewController.h */,
+				A6AC0A931EE2ACBF0021E790 /* TMPlanCreateViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -366,6 +374,8 @@
 				9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */,
 				A67245C01EE1DC4E00CBDB45 /* TMPlanView.h */,
 				A67245C11EE1DC4E00CBDB45 /* TMPlanView.m */,
+				A6AC0A951EE2B6A70021E790 /* TMPlanCreateCell.h */,
+				A6AC0A961EE2B6A70021E790 /* TMPlanCreateCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -706,6 +716,7 @@
 				A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */,
 				9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */,
 				9A254FBE1EE292E0008BD29F /* TMPlanDetailView.m in Sources */,
+				A6AC0A971EE2B6A70021E790 /* TMPlanCreateCell.m in Sources */,
 				A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */,
 				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
 				A65C0BCE1EE1DA32003B1D82 /* XLCircle.m in Sources */,
@@ -719,6 +730,7 @@
 				9A254FBF1EE292E0008BD29F /* TMPlanCreateView.m in Sources */,
 				A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
+				A6AC0A941EE2ACBF0021E790 /* TMPlanCreateViewController.m in Sources */,
 				A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
