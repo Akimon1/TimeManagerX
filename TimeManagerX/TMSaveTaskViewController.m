@@ -7,9 +7,10 @@
 //
 
 #import "TMSaveTaskViewController.h"
+#import "TMHomeViewController.h"
 
 @interface TMSaveTaskViewController ()
-
+@property (nonatomic,strong) TMHomeViewController *homeViewController;
 @end
 
 @implementation TMSaveTaskViewController
@@ -233,9 +234,12 @@
                 //创建对象成功，打印对象值
                 NSLog(@"%@",newTask);
                 [KVNProgress showSuccessWithStatus:@"任务已保存"];
+                _homeViewController = [TMHomeViewController new];
+                [self presentViewController:_homeViewController animated:true completion:nil];
             } else if (error){
                 //发生错误后的动作
                 NSLog(@"%@",error);
+                [KVNProgress showErrorWithStatus:@"保存失败，遇到了不可预知的意外呢。"];
             } else {
                 NSLog(@"Unknow error");
             }
