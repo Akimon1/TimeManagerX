@@ -164,7 +164,10 @@
         .centerXEqualToView(_memoLabel)
         .widthIs(200)
         .heightIs(70);
-//        .autoHeightRatio(0);
+        
+        self.backgroundColor = [UIColor whiteColor];
+        self.layer.cornerRadius = 15;
+        self.layer.masksToBounds = YES;
         
         self.backgroundColor = [UIColor whiteColor];
     }
