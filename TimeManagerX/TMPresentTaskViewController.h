@@ -19,15 +19,15 @@
 @property (nonatomic,strong) UIBarButtonItem *rightButton;
 @property (nonatomic,strong) UIAlertController *alertController;
 @property (nonatomic,strong) TMSaveTaskViewController *saveTaskViewController;
-@property (strong, nonatomic)  UILabel *dateLabel;
-@property (strong, nonatomic)  UILabel *timeLabel;
-@property (strong, nonatomic)  NSTimer *dateTimer;
-@property (strong, nonatomic)  NSTimer *timeTimer;
+@property (nonatomic,strong)  UILabel *dateLabel;
+@property (nonatomic,strong)  UILabel *timeLabel;
+@property (nonatomic,strong)  NSTimer *dateTimer;
+@property (nonatomic,strong)  NSTimer *timeTimer;
 //圆形图
-@property (strong, nonatomic)  XLCircleProgress *circle;
+@property (nonatomic,strong)  XLCircleProgress *circle;
 
-@property (strong, nonatomic) UILabel *countLabel;
-@property (strong, nonatomic) UIButton *stateButton;
-@property (strong, nonatomic) NSString *nowTime;
+@property (nonatomic,strong) UILabel *countLabel;
+@property (nonatomic,strong) UIButton *stateButton;
+@property (nonatomic,strong) NSString *nowTime;
 
 @end

@@ -25,6 +25,7 @@
     [self setupCircle];
     [self setupCountLabel];
     [self setupTimeTimer];
+    [self setupStateButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,6 +122,24 @@
     .topSpaceToView(_dateLabel, _circle.frame.size.height+SCREEN_HEIGHT*0.1)
     .centerXIs(SCREEN_WIDTH/2);
 }
+-(void)setupStateButton{
+    _stateButton = [UIButton new];
+    [self.view addSubview:_stateButton];
+    [_stateButton setTitle:@"开始" forState:UIControlStateNormal];
+    [_stateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _stateButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    _stateButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:28];
+    _stateButton.layer.cornerRadius = SCREEN_HEIGHT*0.05;
+    _stateButton.layer.borderColor = [[UIColor blueColor]CGColor];
+    _stateButton.layer.borderWidth = 3;
+    _stateButton.layer.masksToBounds = YES;
+    [_stateButton addTarget:self action:@selector(changeState) forControlEvents:UIControlEventTouchUpInside];//给button添加点击事件，action参数中写入事件执行方法
+    _stateButton.sd_layout
+    .heightIs(SCREEN_HEIGHT*0.1)
+    .widthIs(SCREEN_HEIGHT*0.1)
+    .bottomSpaceToView(self.view, SCREEN_HEIGHT*0.05)
+    .centerXIs(SCREEN_WIDTH/2);
+}
 
 - (void)dateDisplay {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -134,7 +153,7 @@
     _dateLabel.clipsToBounds = YES;
     _dateLabel.numberOfLines = 0;
     _dateLabel.layer.borderColor = [[UIColor grayColor]CGColor];
-    _dateLabel.layer.borderWidth = 0.5f;
+    _dateLabel.layer.borderWidth = 1;
     _dateLabel.layer.masksToBounds = YES;
 }
 
@@ -149,11 +168,13 @@
     _timeLabel.layer.cornerRadius = SCREEN_HEIGHT*0.05;
     _timeLabel.clipsToBounds = YES;
     _timeLabel.layer.borderColor = [[UIColor grayColor]CGColor];
-    _timeLabel.layer.borderWidth = 0.5f;
+    _timeLabel.layer.borderWidth = 1;
     _timeLabel.layer.masksToBounds = YES;
-    _count =_count+1;
-    if(_count>60)_count=1;
-    _circle.progress=_count*0.01*10/6;
+    if (isRunning == YES){
+        _count =_count+1;
+        if(_count>60)_count=1;
+        _circle.progress=_count*0.01*10/6;
+    }
 }
 
 - (NSString *)getWeekdayFromDate:(NSDate *)date {
@@ -168,13 +189,13 @@
         [stopWatch pause];
         isRunning = NO;
         [_stateButton setTitle:@"开始" forState:UIControlStateNormal];
+        [_stateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }else{
         [stopWatch start];
         isRunning = YES;
         [_stateButton setTitle:@"暂停" forState:UIControlStateNormal];
+        [_stateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
-}
-- (void)finish{
 }
 
 

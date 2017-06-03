@@ -31,4 +31,8 @@
 #define kIndent_main_color [UIColor colorWithRed:176/255.0 green:18/255.0 blue:10/255.0 alpha:1]
 #define kIndent_cell_label_color [UIColor colorWithRed:0 green:0 blue:0 alpha:0.78]
 
+//font
+#define kTextFont @"Arial-BoldMT"
+
+
 #endif /* TM_Prefix_pch */
