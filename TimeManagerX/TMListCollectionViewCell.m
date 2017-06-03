@@ -19,7 +19,7 @@
         _isEditable = YES;
         _memoContentTextView.editable = _isEditable;
     }else {
-        [_editControllBtn setTitle:@"editdisable" forState:UIControlStateNormal];
+        [_editControllBtn setTitle:@"unedit" forState:UIControlStateNormal];
         _isEditable = NO;
         _memoContentTextView.editable = _isEditable;
     }
@@ -31,18 +31,6 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        //bug
-        //此btn无法显示，但可以响应事件
-        _editControllBtn = [UIButton new];
-        [_editControllBtn setTitle:@"button" forState:UIControlStateNormal];
-        _editControllBtn.titleLabel.textColor = [UIColor blackColor];
-        [self addSubview:_editControllBtn];
-        [_editControllBtn addTarget:self action:@selector(singleTapAction:) forControlEvents:UIControlEventTouchUpInside];
-        _editControllBtn.sd_layout
-        .topSpaceToView(self, 20)
-        .rightSpaceToView(self, 40)
-        .widthIs(SCREEN_WIDTH/4)
-        .heightIs(30);
         
         _titleLabel = [UILabel new];
         [self addSubview:_titleLabel];
@@ -200,6 +188,25 @@
         self.layer.masksToBounds = YES;
         
         self.backgroundColor = [UIColor whiteColor];
+        
+        //编辑按钮
+        _editControllBtn = [UIButton new];
+        _editControllBtn.titleLabel.textColor = [UIColor blackColor];
+        _editControllBtn.layer.cornerRadius = 5;
+        _editControllBtn.layer.masksToBounds = YES;
+        _editControllBtn.titleLabel.font = [UIFont systemFontOfSize:10];
+        [_editControllBtn setTitle:@"unedit" forState:UIControlStateNormal];
+        [_editControllBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_editControllBtn setBackgroundColor:[UIColor grayColor]];
+        _editControllBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        [_editControllBtn addTarget:self action:@selector(singleTapAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_editControllBtn];
+        
+        _editControllBtn.sd_layout
+        .topSpaceToView(self, 10)
+        .leftSpaceToView(_titleLabel, 40)
+        .widthIs(40)
+        .heightIs(20);
     }
     return self;
 }
