@@ -73,7 +73,7 @@
 }
 
 -(void)setTheLeftButton{                                                                     //设置导航栏左按钮
-    _leftButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"person"] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    _leftButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user32"] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
     self.navigationItem.leftBarButtonItem = _leftButton;
 }
 -(void)leftAction{

@@ -153,7 +153,7 @@
     _timeLabel.layer.masksToBounds = YES;
     _count =_count+1;
     if(_count>60)_count=1;
-    _circle.progress=_count*0.01;
+    _circle.progress=_count*0.01*10/6;
 }
 
 - (NSString *)getWeekdayFromDate:(NSDate *)date {
