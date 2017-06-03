@@ -10,20 +10,52 @@
 
 @implementation TMListCollectionViewCell
 
+
+
+-(void)singleTapAction:(UIGestureRecognizer*) recognizer
+{
+    if(!_isEditable){
+        [_editControllBtn setTitle:@"editable" forState:UIControlStateNormal];
+        _isEditable = YES;
+        _memoContentTextView.editable = _isEditable;
+    }else {
+        [_editControllBtn setTitle:@"editdisable" forState:UIControlStateNormal];
+        _isEditable = NO;
+        _memoContentTextView.editable = _isEditable;
+    }
+}
+
 - (id)initWithFrame:(CGRect)frame {
+    _isEditable = NO;
+    CGFloat cellWidth = frame.size.width;
+    
     self = [super initWithFrame:frame];
     if (self) {
+        //bug
+        //此btn无法显示，但可以响应事件
+        _editControllBtn = [UIButton new];
+        [_editControllBtn setTitle:@"button" forState:UIControlStateNormal];
+        _editControllBtn.titleLabel.textColor = [UIColor blackColor];
+        [self addSubview:_editControllBtn];
+        [_editControllBtn addTarget:self action:@selector(singleTapAction:) forControlEvents:UIControlEventTouchUpInside];
+        _editControllBtn.sd_layout
+        .topSpaceToView(self, 20)
+        .rightSpaceToView(self, 40)
+        .widthIs(SCREEN_WIDTH/4)
+        .heightIs(30);
+        
         _titleLabel = [UILabel new];
         [self addSubview:_titleLabel];
-        _titleLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-        _titleLabel.font = [UIFont boldSystemFontOfSize:20];
+        _titleLabel.textColor = [UIColor blackColor];
+        _titleLabel.font = [UIFont fontWithName:kTextFont size:20];
+
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.text = @"任务标题";
         _titleLabel.sd_layout
         .topSpaceToView(self, 30)
         .centerXIs(self.width/2)
         .autoHeightRatio(0);
-        [_titleLabel setSingleLineAutoResizeWithMaxWidth:200];
+        [_titleLabel setSingleLineAutoResizeWithMaxWidth:cellWidth];
         
         _dateLabel = [UILabel new];
         [self addSubview:_dateLabel];
@@ -31,10 +63,11 @@
         _dateLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
         _dateLabel.font = [UIFont boldSystemFontOfSize:16];
         _dateLabel.sd_layout
-        .leftSpaceToView(self, 40)
-        .topSpaceToView(_titleLabel, 40)
-        .widthIs(100)
+        .leftSpaceToView(self, 6)
+        .topSpaceToView(_titleLabel, 20)
+        .widthIs(80)
         .autoHeightRatio(0);
+        
         
         _taskDateLabel = [UILabel new];
         [self addSubview:_taskDateLabel];
@@ -54,8 +87,8 @@
         _startLabel.font = [UIFont boldSystemFontOfSize:16];
         _startLabel.sd_layout
         .leftEqualToView(_dateLabel)
-        .topSpaceToView(_dateLabel, 40)
-        .widthIs(100)
+        .topSpaceToView(_dateLabel, 20)
+        .widthIs(80)
         .autoHeightRatio(0);
         
         _startTimeLabel = [UILabel new];
@@ -76,8 +109,8 @@
         _endLabel.font = [UIFont boldSystemFontOfSize:16];
         _endLabel.sd_layout
         .leftEqualToView(_dateLabel)
-        .topSpaceToView(_startLabel, 40)
-        .widthIs(100)
+        .topSpaceToView(_startLabel, 20)
+        .widthIs(80)
         .autoHeightRatio(0);
         
         _endTimeLabel = [UILabel new];
@@ -98,8 +131,8 @@
         _lastingLabel.font = [UIFont boldSystemFontOfSize:16];
         _lastingLabel.sd_layout
         .leftEqualToView(_dateLabel)
-        .topSpaceToView(_endLabel, 40)
-        .widthIs(100)
+        .topSpaceToView(_endLabel, 20)
+        .widthIs(80)
         .autoHeightRatio(0);
         
         _lastingTimeLabel = [UILabel new];
@@ -120,22 +153,19 @@
         _locationLabel.font = [UIFont boldSystemFontOfSize:16];
         _locationLabel.sd_layout
         .leftEqualToView(_dateLabel)
-        .topSpaceToView(_lastingLabel, 40)
-        .widthIs(100)
+        .topSpaceToView(_lastingLabel, 20)
+        .widthIs(80)
         .autoHeightRatio(0);
         
         _locationContentLabel = [UILabel new];
         [self addSubview:_locationContentLabel];
-        _locationContentLabel.text = @"地点";
+        _locationContentLabel.text = @"地点啊";
         _locationContentLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
         _locationContentLabel.font = [UIFont systemFontOfSize:15];
-        _locationContentLabel.layer.borderColor = [[UIColor colorWithRed:215.0 / 255.0 green:215.0 / 255.0 blue:215.0 / 255.0 alpha:1] CGColor];
-        _locationContentLabel.layer.borderWidth = 0.6f;
-        _locationContentLabel.layer.cornerRadius = 6.0f;
         _locationContentLabel.sd_layout
-        .leftSpaceToView(_locationLabel, 12)
+        .leftSpaceToView(_locationLabel, 14)
         .centerYEqualToView(_locationLabel)
-        .widthIs(150)
+        .widthIs(80)
         .autoHeightRatio(0);
         
         _memoLabel = [UILabel new];
@@ -146,27 +176,27 @@
         _memoLabel.textAlignment = NSTextAlignmentCenter;
         _memoLabel.sd_layout
         .centerXIs(self.width/2)
-        .topSpaceToView(_locationLabel, 30)
-        .widthIs(100)
+        .topSpaceToView(_locationLabel, 20)
+        .widthIs(80)
         .autoHeightRatio(0);
         
-        _memoContentLabel = [UILabel new];
-        [self addSubview:_memoContentLabel];
-        _memoContentLabel.text = @"备注啊";
-        _memoContentLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-        _memoContentLabel.font = [UIFont systemFontOfSize:13];
-        _memoContentLabel.backgroundColor = [UIColor whiteColor];
-        _memoContentLabel.layer.borderColor = [[UIColor colorWithRed:215.0 / 255.0 green:215.0 / 255.0 blue:215.0 / 255.0 alpha:1] CGColor];
-        _memoContentLabel.layer.borderWidth = 0.6f;
-        _memoContentLabel.layer.cornerRadius = 6.0f;
-        _memoContentLabel.sd_layout
+        _memoContentTextView = [UITextView new];
+        _memoContentTextView.editable = _isEditable;
+        [self addSubview:_memoContentTextView];
+        _memoContentTextView.text = @"这里是备注，这里是备注，这里时备注，这里时备胎，这里时备注，这里是备注,这里是备注，这里是备注，这里时备注，这里时备胎，这里时备注，这里是备注";
+        _memoContentTextView.textColor = [UIColor whiteColor];
+        _memoContentTextView.font = [UIFont systemFontOfSize:14];
+        _memoContentTextView.backgroundColor = [UIColor colorWithRed:215.0 / 255.0 green:215.0 / 255.0 blue:215.0 / 255.0 alpha:1];
+        _memoContentTextView.layer.cornerRadius = 7.0f;
+        _memoContentTextView.sd_layout
         .topSpaceToView(_memoLabel, 10)
         .centerXEqualToView(_memoLabel)
-        .widthIs(200)
-        .heightIs(70);
+        .widthIs(cellWidth-12)
+        .bottomSpaceToView(self, 7);
+        
         
         self.backgroundColor = [UIColor whiteColor];
-        self.layer.cornerRadius = 15;
+        self.layer.cornerRadius = 17;
         self.layer.masksToBounds = YES;
         
         self.backgroundColor = [UIColor whiteColor];

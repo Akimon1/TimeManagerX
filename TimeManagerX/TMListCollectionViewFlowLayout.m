@@ -17,7 +17,7 @@
 @implementation TMListCollectionViewFlowLayout
 
 - (void)prepareLayout {
-    self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 80,
+    self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 60,
                                self.collectionView.frame.size.height - 180);
     self.minimumLineSpacing = 20;
     self.sectionInset = UIEdgeInsetsMake(20, 30, 83, 30);

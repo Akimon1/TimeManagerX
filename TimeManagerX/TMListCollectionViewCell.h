@@ -10,6 +10,8 @@
 
 @interface TMListCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic,strong) UIButton *editControllBtn;
+
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UILabel *dateLabel;
 @property (nonatomic,strong) UILabel *taskDateLabel;
@@ -22,6 +24,8 @@
 @property (nonatomic,strong) UILabel *locationLabel;
 @property (nonatomic,strong) UILabel *locationContentLabel;
 @property (nonatomic,strong) UILabel *memoLabel;
-@property (nonatomic,strong) UILabel *memoContentLabel;
+@property (nonatomic,strong) UITextView *memoContentTextView;
+
+@property (nonatomic) BOOL isEditable;
 
 @end
