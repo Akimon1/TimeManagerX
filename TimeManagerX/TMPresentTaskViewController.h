@@ -15,5 +15,8 @@
 @property (nonatomic,strong) UIBarButtonItem *rightButton;
 @property (nonatomic,strong) UIAlertController *alertController;
 @property (nonatomic,strong) TMSaveTaskViewController *saveTaskViewController;
-
+@property (strong, nonatomic)  UILabel *dateLabel;
+@property (strong, nonatomic)  UILabel *timeLabel;
+@property (strong, nonatomic)  NSTimer *dateTimer;
+@property (strong, nonatomic)  NSTimer *timeTimer;
 @end

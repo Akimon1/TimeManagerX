@@ -16,9 +16,6 @@
 @property (strong,nonatomic) UILabel *planNameLabel;
 @property (strong,nonatomic) UILabel *startTimeLabel;
 
-@property (strong, nonatomic)  UILabel *dateLabel;
-@property (strong, nonatomic)  UILabel *timeLabel;
-@property (strong, nonatomic)  NSTimer *dateTimer;
-@property (strong, nonatomic)  NSTimer *timeTimer;
+
 - (instancetype) init;
 @end

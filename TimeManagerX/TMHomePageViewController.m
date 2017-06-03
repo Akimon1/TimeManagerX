@@ -20,6 +20,7 @@
     [self setupPlanView];
     [self setTheLeftButton];
     [self setTheRightButton];
+    [self setupToPlanDetailBtn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +41,29 @@
     //设置方法让此值跟随事件变化
     _planView.circle.progress = 0.35;
     _planView.circle.totalTime = 25;
+}
+
+-(void)setupToPlanDetailBtn{
+    _ToPlanDetailBtn = [UIButton new];
+    [self.planView addSubview:_ToPlanDetailBtn];
+    _ToPlanDetailBtn.backgroundColor = [UIColor clearColor];
+    
+    _ToPlanDetailBtn.sd_layout
+    .topEqualToView(_planView.circle)
+    .bottomEqualToView(_planView.circle)
+    .rightEqualToView(_planView.circle)
+    .leftEqualToView(_planView.circle);
+    [_ToPlanDetailBtn addTarget:self action:@selector(toPlanDetailViewWhenTouch:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)toPlanDetailViewWhenTouch:(id)sender{
+    if([_ToPlanDetailBtn isEqual:sender]){
+        _planDetailViewController = [TMPlanDetailViewController new];
+        _planDetailViewController.hidesBottomBarWhenPushed = YES;
+
+        [self.navigationController pushViewController:_planDetailViewController animated:true];
+        self.hidesBottomBarWhenPushed=NO;
+    }
 }
 
 -(void)setupHomePage{

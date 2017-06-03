@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		64898A39BF3D120DDF0CC03F /* libPods-TimeManagerXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A8238BD797E288292FAC89 /* libPods-TimeManagerXTests.a */; };
+		9A254FBE1EE292E0008BD29F /* TMPlanDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A254FBB1EE292E0008BD29F /* TMPlanDetailView.m */; };
+		9A254FBF1EE292E0008BD29F /* TMPlanCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */; };
+		9A254FC21EE292F4008BD29F /* TMPlanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */; };
 		9A5AE8B21EE26EA600D5FBE6 /* TMSaveTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */; };
 		9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B71EE26F3600D5FBE6 /* TMPresentTaskViewController.m */; };
 		9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8BB1EE273A200D5FBE6 /* MZTimerLabel.m */; };
@@ -56,6 +59,12 @@
 		73DA0A649A988C1271F4F93B /* Pods-TimeManagerXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7834A64D34FEA62B65F2ACAC /* Pods-TimeManagerX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0A18E2A7356D66F51BF568 /* Pods-TimeManagerX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerX.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX.release.xcconfig"; sourceTree = "<group>"; };
+		9A254FBA1EE292E0008BD29F /* TMPlanDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanDetailView.h; sourceTree = "<group>"; };
+		9A254FBB1EE292E0008BD29F /* TMPlanDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanDetailView.m; sourceTree = "<group>"; };
+		9A254FBC1EE292E0008BD29F /* TMPlanCreateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanCreateView.h; sourceTree = "<group>"; };
+		9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanCreateView.m; sourceTree = "<group>"; };
+		9A254FC01EE292F4008BD29F /* TMPlanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanDetailViewController.h; sourceTree = "<group>"; };
+		9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanDetailViewController.m; sourceTree = "<group>"; };
 		9A5AE8B01EE26EA600D5FBE6 /* TMSaveTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSaveTaskViewController.h; sourceTree = "<group>"; };
 		9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSaveTaskViewController.m; sourceTree = "<group>"; };
 		9A5AE8B61EE26F3600D5FBE6 /* TMPresentTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPresentTaskViewController.h; sourceTree = "<group>"; };
@@ -314,6 +323,8 @@
 				9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */,
 				9A5DB2E01EDF0484001C1B8F /* TMHomePageViewController.h */,
 				9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */,
+				9A254FC01EE292F4008BD29F /* TMPlanDetailViewController.h */,
+				9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -349,6 +360,10 @@
 		A65C0BD11EE1DA63003B1D82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9A254FBA1EE292E0008BD29F /* TMPlanDetailView.h */,
+				9A254FBB1EE292E0008BD29F /* TMPlanDetailView.m */,
+				9A254FBC1EE292E0008BD29F /* TMPlanCreateView.h */,
+				9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */,
 				A67245C01EE1DC4E00CBDB45 /* TMPlanView.h */,
 				A67245C11EE1DC4E00CBDB45 /* TMPlanView.m */,
 			);
@@ -690,15 +705,18 @@
 				9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */,
 				A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */,
 				9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */,
+				9A254FBE1EE292E0008BD29F /* TMPlanDetailView.m in Sources */,
 				A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */,
 				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
 				A65C0BCE1EE1DA32003B1D82 /* XLCircle.m in Sources */,
 				A65C0BCF1EE1DA32003B1D82 /* XLCircleProgress.m in Sources */,
 				A64B99E01EE13E3D000ECB5A /* TMSignView.m in Sources */,
+				9A254FC21EE292F4008BD29F /* TMPlanDetailViewController.m in Sources */,
 				9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */,
 				9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */,
 				9A5AE8B21EE26EA600D5FBE6 /* TMSaveTaskViewController.m in Sources */,
 				9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */,
+				9A254FBF1EE292E0008BD29F /* TMPlanCreateView.m in Sources */,
 				A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
 				A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */,
