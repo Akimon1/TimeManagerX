@@ -10,8 +10,7 @@
 
 
 @interface TMListPageViewController : UIViewController
-@property (strong, nonatomic)  UILabel *dateLabel;
-@property (strong, nonatomic)  UILabel *timeLabel;
- 
-  
+
+@property (nonatomic,strong) UICollectionView *collectionView;
+
 @end
