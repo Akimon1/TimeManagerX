@@ -16,6 +16,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>KVNProgress.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>MTCardLayout.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -78,7 +83,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>099EF676B3B42EA75A9F0D299AE9FB61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0EF5E480484F99FEF817276107E7D1BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16E26754EDE45A658B25426901C5DCAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -108,6 +123,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>575932F0AB99B63AA8B099F5661F0FB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>580F9A86168AC41A0D55FCC5D3BCBDC1</key>
 		<dict>
 			<key>primary</key>
@@ -119,6 +139,11 @@
 			<true/>
 		</dict>
 		<key>66AA6A229361EA1305FFB3FB7DDFB6B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6AD56F5D07D2D4AC272A8F3E13DAF71A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -168,6 +193,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9E917E78F7EDEA0DF5782D632BA7C389</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9F2A60C0EB9345CAA8AFC9B2DF13EA15</key>
 		<dict>
 			<key>primary</key>
@@ -193,7 +223,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C0C21BA671124157AC4857094A2588E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CA988C69738837258EF50F82EA2A886F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDD0E6CEFE0B2FEA07CFF8B6122195ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
