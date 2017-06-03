@@ -21,11 +21,29 @@
     [self setTheLeftButton];
     [self setTheRightButton];
     [self setupTimer];
+    [self setupCircle];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
+}
+
+-(void)setupCircle {
+    
+    CGFloat margin = SCREEN_WIDTH / 6;
+    CGFloat circleWidth = SCREEN_WIDTH - margin * 2;
+    
+    _circle = [[XLCircleProgress alloc] initWithFrame:CGRectMake(0, 0,circleWidth,circleWidth)];
+    _circle.percentLabel.hidden = YES;
+    _circle.totalTimeLabel.hidden = YES;
+    [self.view addSubview:_circle];
+    
+    _circle.sd_layout
+    .topSpaceToView(self, SCREEN_HEIGHT*0.05)
+    .centerXIs(SCREEN_WIDTH/2);
+
+    
 }
 
 -(void)setupPresentTask{

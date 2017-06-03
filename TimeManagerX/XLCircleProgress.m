@@ -11,9 +11,7 @@
 
 @implementation XLCircleProgress
 {
-    XLCircle* _circle;
-    UILabel *_percentLabel;
-    UILabel *_totalTimeLabel;
+
 }
 
 -(instancetype)initWithFrame:(CGRect)frame
