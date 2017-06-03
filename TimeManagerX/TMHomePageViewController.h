@@ -10,12 +10,14 @@
 #import "TMPersonalViewController.h"
 #import "TMPlanView.h"
 #import "pop.h"
+#import "TMPresentTaskViewController.h"
 
 @interface TMHomePageViewController : UIViewController
 @property (nonatomic,strong) UIBarButtonItem *leftButton;
 @property (nonatomic,strong) UIBarButtonItem *rightButton;
 @property (nonatomic,strong) TMPersonalViewController *personViewController;
 @property (nonatomic,strong) UIAlertController *alertController;
+@property (nonatomic,strong) TMPresentTaskViewController *presentTaskViewController;
 
 @property (strong,nonatomic) TMPlanView *planView;
 @end

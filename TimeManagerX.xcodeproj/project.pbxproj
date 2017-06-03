@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		64898A39BF3D120DDF0CC03F /* libPods-TimeManagerXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A8238BD797E288292FAC89 /* libPods-TimeManagerXTests.a */; };
+		9A5AE8B21EE26EA600D5FBE6 /* TMSaveTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */; };
+		9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B71EE26F3600D5FBE6 /* TMPresentTaskViewController.m */; };
 		9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */; };
 		9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E61EDF04BF001C1B8F /* TMListPageViewController.m */; };
 		9A7FFF411EDEBE420084C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF401EDEBE420084C772 /* main.m */; };
@@ -53,6 +55,10 @@
 		73DA0A649A988C1271F4F93B /* Pods-TimeManagerXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerXUITests/Pods-TimeManagerXUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7834A64D34FEA62B65F2ACAC /* Pods-TimeManagerX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0A18E2A7356D66F51BF568 /* Pods-TimeManagerX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManagerX.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeManagerX/Pods-TimeManagerX.release.xcconfig"; sourceTree = "<group>"; };
+		9A5AE8B01EE26EA600D5FBE6 /* TMSaveTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSaveTaskViewController.h; sourceTree = "<group>"; };
+		9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSaveTaskViewController.m; sourceTree = "<group>"; };
+		9A5AE8B61EE26F3600D5FBE6 /* TMPresentTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPresentTaskViewController.h; sourceTree = "<group>"; };
+		9A5AE8B71EE26F3600D5FBE6 /* TMPresentTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPresentTaskViewController.m; sourceTree = "<group>"; };
 		9A5DB2E01EDF0484001C1B8F /* TMHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMHomePageViewController.h; sourceTree = "<group>"; };
 		9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomePageViewController.m; sourceTree = "<group>"; };
 		9A5DB2E51EDF04BF001C1B8F /* TMListPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListPageViewController.h; sourceTree = "<group>"; };
@@ -123,6 +129,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A5AE8AC1EE26E7000D5FBE6 /* 即时任务 */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE8AF1EE26E8B00D5FBE6 /* Controller */,
+			);
+			name = "即时任务";
+			sourceTree = "<group>";
+		};
+		9A5AE8AD1EE26E8000D5FBE6 /* 保存任务 */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE8AE1EE26E8500D5FBE6 /* Controller */,
+			);
+			name = "保存任务";
+			sourceTree = "<group>";
+		};
+		9A5AE8AE1EE26E8500D5FBE6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE8B01EE26EA600D5FBE6 /* TMSaveTaskViewController.h */,
+				9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9A5AE8AF1EE26E8B00D5FBE6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A5AE8B61EE26F3600D5FBE6 /* TMPresentTaskViewController.h */,
+				9A5AE8B71EE26F3600D5FBE6 /* TMPresentTaskViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		9A5DB2E31EDF0492001C1B8F /* 列表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +230,8 @@
 		9A7FFF3E1EDEBE420084C772 /* TimeManagerX */ = {
 			isa = PBXGroup;
 			children = (
+				9A5AE8AD1EE26E8000D5FBE6 /* 保存任务 */,
+				9A5AE8AC1EE26E7000D5FBE6 /* 即时任务 */,
 				A65C0BC91EE1DA18003B1D82 /* Frameworks */,
 				A64B99E71EE175BB000ECB5A /* 个人中心 */,
 				A67E34F31EE027C30008EAF0 /* Sign登陆in注册up页面 */,
@@ -633,6 +675,7 @@
 			files = (
 				9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */,
 				A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */,
+				9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */,
 				A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */,
 				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
 				A65C0BCE1EE1DA32003B1D82 /* XLCircle.m in Sources */,
@@ -640,6 +683,7 @@
 				A64B99E01EE13E3D000ECB5A /* TMSignView.m in Sources */,
 				9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */,
 				9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */,
+				9A5AE8B21EE26EA600D5FBE6 /* TMSaveTaskViewController.m in Sources */,
 				9A5DB2E71EDF04BF001C1B8F /* TMListPageViewController.m in Sources */,
 				A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
