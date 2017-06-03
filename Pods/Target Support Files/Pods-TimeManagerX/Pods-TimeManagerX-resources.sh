@@ -81,10 +81,12 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "KVNProgress/KVNProgress/Resources/KVNProgressView.xib"
   install_resource "SIAlertView/SIAlertView/SIAlertView.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "KVNProgress/KVNProgress/Resources/KVNProgressView.xib"
   install_resource "SIAlertView/SIAlertView/SIAlertView.bundle"
 fi
 
