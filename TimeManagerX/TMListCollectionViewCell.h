@@ -26,6 +26,7 @@
 @property (nonatomic,strong) UILabel *memoLabel;
 @property (nonatomic,strong) UITextView *memoContentTextView;
 
+
 @property (nonatomic) BOOL isEditable;
 
 @end

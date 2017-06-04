@@ -17,8 +17,7 @@
 @implementation TMListCollectionViewFlowLayout
 
 - (void)prepareLayout {
-    self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 60,
-                               self.collectionView.frame.size.height - 180);
+    self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 60,self.collectionView.frame.size.height - 180);
     self.minimumLineSpacing = 20;
     self.sectionInset = UIEdgeInsetsMake(20, 30, 83, 30);
     
@@ -34,6 +33,7 @@
     NSArray *attributes = [[NSArray alloc] initWithArray:superAttributes copyItems:YES];
     
     CGRect visibleRect = CGRectZero;
+
     visibleRect.origin = self.collectionView.contentOffset;
     visibleRect.size = self.collectionView.frame.size;
     

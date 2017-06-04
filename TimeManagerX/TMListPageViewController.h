@@ -17,4 +17,5 @@
 
 @property (nonatomic,strong)   UICollectionView    *collectionView;
 @property (nonatomic,strong)   NSMutableArray      *infoMutableArray;
+@property (nonatomic,strong) UIBarButtonItem       *rightButton;
 @end

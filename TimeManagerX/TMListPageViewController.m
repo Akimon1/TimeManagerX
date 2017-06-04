@@ -20,6 +20,7 @@ static NSString *cellIdentifier = @"CellIdentifier";
     [super viewDidLoad];
     [KVNProgress showWithStatus:@"加载中。。。。"];
     [self setupListPage];
+    [self setTheRightButton];
     [self initArray];
     [self searchTabel];
 
@@ -57,7 +58,6 @@ static NSString *cellIdentifier = @"CellIdentifier";
                     info.taskRemarks = [obj objectForKey:@"task_Remarks"];
                     [_infoMutableArray addObject:info];
                 }
-                NSLog(@"%@",_infoMutableArray);
                 [self setupCollectionView];
                 [KVNProgress showSuccessWithStatus:@"获取任务列表成功！"];
             }
@@ -74,7 +74,7 @@ static NSString *cellIdentifier = @"CellIdentifier";
 }
 -(void)setupCollectionView{
     TMListCollectionViewFlowLayout *layout = [[TMListCollectionViewFlowLayout alloc] init];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
     [self.view addSubview:collectionView];
     [collectionView registerClass:[TMListCollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
     collectionView.dataSource = self;
@@ -113,6 +113,17 @@ static NSString *cellIdentifier = @"CellIdentifier";
     cell.locationContentLabel.text  = info.taskLocation;
     cell.memoContentTextView.text   = info.taskRemarks;
     return cell;
+}
+-(void)setTheRightButton{                                                                     //设置导航栏右按钮
+    _rightButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    self.navigationItem.rightBarButtonItem = _rightButton;
+}
+-(void)rightAction{
+    [self.collectionView reloadData];
+    [KVNProgress showSuccessWithStatus:@"刷新成功"];
+    if(!_infoMutableArray.count){
+        [KVNProgress showWithStatus:@"您还没有保存过任务。"];
+    }
 }
 
 
