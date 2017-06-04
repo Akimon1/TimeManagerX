@@ -210,5 +210,8 @@
     }
     return self;
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self endEditing:YES];
+}
 @end

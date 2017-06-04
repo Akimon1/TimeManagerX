@@ -41,5 +41,8 @@
 
     // Configure the view for the selected state
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self endEditing:YES];
+}
 @end
