@@ -69,7 +69,7 @@
 #pragma mark - tableview Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 5;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -125,6 +125,10 @@
             [[cell textLabel]  setText:@"注销"];
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
             break;
+        case 4:
+            [[cell textLabel]  setText:@"修改密码"];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            break;
         default:
             [[cell textLabel]  setText:@""];
             break;
@@ -156,6 +160,9 @@
     [_alertController addAction:ok];
     [_alertController addAction:cancel];
     [self presentViewController:_alertController animated:YES completion:nil];
+}
+
+-(void)changePassword{
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
