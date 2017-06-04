@@ -129,7 +129,7 @@
 -(void)setupStateButton{
     _stateButton = [UIButton new];
     [self.view addSubview:_stateButton];
-    [_stateButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+    [_stateButton setImage:[UIImage imageNamed:@"run"] forState:UIControlStateNormal];
     _stateButton.layer.cornerRadius = SCREEN_HEIGHT*0.05;
     [_stateButton addTarget:self action:@selector(changeState) forControlEvents:UIControlEventTouchUpInside];//给button添加点击事件，action参数中写入事件执行方法
     _stateButton.sd_layout

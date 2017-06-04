@@ -15,6 +15,7 @@
     [super viewDidAppear:nil];
     [self ifLogin];
     
+    
 }
 
 - (void)viewDidLoad {
@@ -62,10 +63,7 @@
     .autoHeightRatio(0);
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
-}
+
 
 
 

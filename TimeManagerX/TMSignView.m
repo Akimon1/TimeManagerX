@@ -68,9 +68,9 @@
         button.tag = i;
         
         if(i==0) {
-            [button setTitle:[NSString stringWithFormat:@"登陆"] forState:UIControlStateNormal];
+            [button setTitle:[NSString stringWithFormat:@"SIGN IN"] forState:UIControlStateNormal];
         }else {
-            [button setTitle:[NSString stringWithFormat:@"注册"] forState:UIControlStateNormal];
+            [button setTitle:[NSString stringWithFormat:@"SIGN UP"] forState:UIControlStateNormal];
         }
         [button setBackgroundColor:[UIColor clearColor]];
         button.titleLabel.font = [UIFont boldSystemFontOfSize:15];
@@ -103,33 +103,31 @@
     CGFloat spaceToLeft = (SCREEN_WIDTH - widthOfLabel) / 2;
     
     UILabel *usernameLabel = [[UILabel alloc]initWithFrame:CGRectMake(spaceToLeft, 40, widthOfLabel, 30)];
-    usernameLabel.text = @"用户名";
+    usernameLabel.text = @"USERNAME";
     usernameLabel.font = [UIFont systemFontOfSize:15];
     usernameLabel.backgroundColor = [UIColor clearColor];
     
     UILabel *passwordLabel = [[UILabel alloc] initWithFrame:CGRectMake(spaceToLeft, 120, widthOfLabel, 30)];
-    passwordLabel.text = @"密码";
+    passwordLabel.text = @"PASSWORD";
     passwordLabel.font = [UIFont systemFontOfSize:15];
     passwordLabel.backgroundColor = [UIColor clearColor];
     
     
     _usernameTextField = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 70, widthOfLabel, 40)];
-    _usernameTextField.placeholder = @"请输入用户名";
     
     _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 150, widthOfLabel, 40)];
-    _passwordTextField.placeholder = @"请输入密码";
     _passwordTextField.secureTextEntry = YES;
     
-    _signInBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*0.4, 300, SCREEN_WIDTH*0.2, 40)];
-    _signInBtn.layer.cornerRadius = 15;
+    _signInBtn = [[UIButton alloc] initWithFrame:CGRectMake(spaceToLeft, 300, widthOfLabel, 40)];
+    _signInBtn.layer.cornerRadius = 3;
     _signInBtn.layer.masksToBounds = YES;
     _signInBtn.titleLabel.font = [UIFont boldSystemFontOfSize:20];
-    [_signInBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    [_signInBtn setTitle:@"SIGN IN" forState:UIControlStateNormal];
     [_signInBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_signInBtn setBackgroundColor:[UIColor colorWithRed:27/255.0 green:102/255.0 blue:234/255.0 alpha:0.5]];
+    [_signInBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
     _signInBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    [_signInBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];      //设置title在button被选中情况下为灰色字体
     [_signInBtn addTarget:self action:@selector(signInWhenTouch:) forControlEvents:UIControlEventTouchUpInside];
+
     [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, _usernameTextField, _passwordTextField, _signInBtn]];
     
 }
@@ -140,7 +138,6 @@
         NSString *passwordInField = _passwordTextField.text;
         [BmobUser loginWithUsernameInBackground:usernameInField password:passwordInField block:^(BmobUser *user, NSError *error) {
             if(user){
-                [KVNProgress showSuccessWithStatus:@"登录成功"];
                 NSLog(@"%@",user);
                 //登陆成功跳转页面
                 _myViewController = [self getCurrentViewController:self];
@@ -150,7 +147,6 @@
                 
             }else{
                 NSLog(@"login failed");
-                [KVNProgress showErrorWithStatus:@"登陆失败"];
                 //需要继续操作，当前用户不存在／密码不正确。
             }
         }];
@@ -166,9 +162,7 @@
         [bUser signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error){
             if(isSuccessful){
                 NSLog(@"signup successed");
-                [KVNProgress showSuccessWithStatus:@"注册成功\n确认注册邮件已发送"];
             }else{
-                [KVNProgress showErrorWithStatus:@"注册失败"];
                 NSLog(@"%@",error);
             }
         }];
@@ -183,44 +177,39 @@
     CGFloat spaceToLeft = (SCREEN_WIDTH - widthOfLabel) / 2 + SCREEN_WIDTH;
     
     UILabel *usernameLabel = [[UILabel alloc]initWithFrame:CGRectMake(spaceToLeft, 40, widthOfLabel, 30)];
-    usernameLabel.text = @"用户名";
+    usernameLabel.text = @"USERNAME";
     usernameLabel.font = [UIFont systemFontOfSize:15];
     usernameLabel.backgroundColor = [UIColor clearColor];
     
     UILabel *passwordLabel = [[UILabel alloc] initWithFrame:CGRectMake(spaceToLeft, 120, widthOfLabel, 30)];
-    passwordLabel.text = @"密码";
+    passwordLabel.text = @"PASSWORD";
     passwordLabel.font = [UIFont systemFontOfSize:15];
     passwordLabel.backgroundColor = [UIColor clearColor];
     
     UILabel *emailLabel = [[UILabel alloc] initWithFrame:CGRectMake(spaceToLeft, 200, widthOfLabel, 30)];
-    emailLabel.text = @"邮箱";
+    emailLabel.text = @"EMAIL";
     emailLabel.font = [UIFont systemFontOfSize:15];
     emailLabel.backgroundColor = [UIColor clearColor];
     
     _usernameTextField2 = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 70, widthOfLabel, 40)];
-    _usernameTextField2.placeholder = @"请输入用户名";
 
     _passwordTextField2 = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 150, widthOfLabel, 40)];
     _passwordTextField2.secureTextEntry = YES;
-    _passwordTextField2.placeholder = @"请输入密码";
     
     _emailTextField2 = [[UITextField alloc] initWithFrame:CGRectMake(spaceToLeft, 230, widthOfLabel, 40)];
-    _emailTextField2.placeholder = @"请输入注册邮箱";
     
-    _signUpBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*1.4, 300, SCREEN_WIDTH*0.2, 40)];
-    _signUpBtn.layer.cornerRadius = 15;
+    _signUpBtn = [[UIButton alloc] initWithFrame:CGRectMake(spaceToLeft, 300, widthOfLabel, 40)];
+    _signUpBtn.layer.cornerRadius = 3;
     _signUpBtn.layer.masksToBounds = YES;
     _signUpBtn.titleLabel.font = [UIFont boldSystemFontOfSize:20];
-    [_signUpBtn setTitle:@"注册" forState:UIControlStateNormal];
+    [_signUpBtn setTitle:@"SIGN UP" forState:UIControlStateNormal];
     [_signUpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_signUpBtn setBackgroundColor:[UIColor colorWithRed:27/255.0 green:102/255.0 blue:234/255.0 alpha:0.5]];
+    [_signUpBtn setBackgroundColor:[UIColor colorWithRed:27 green:102 blue:234 alpha:0]];
     _signUpBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    [_signUpBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];//设置title在button被选中情况下为灰色字体
     [_signUpBtn addTarget:self action:@selector(signUpWhenTouch:) forControlEvents:UIControlEventTouchUpInside];
     
     [_contentScrollView sd_addSubviews:@[usernameLabel, passwordLabel, emailLabel, _usernameTextField2, _passwordTextField2, _emailTextField2, _signUpBtn]];
 }
-
 
 #pragma mark -- 配置TextField方法
 - (void) configTextFields:(NSArray *)textFields {
