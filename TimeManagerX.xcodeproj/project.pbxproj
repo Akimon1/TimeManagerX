@@ -16,6 +16,7 @@
 		9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8BB1EE273A200D5FBE6 /* MZTimerLabel.m */; };
 		9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */; };
 		9A77DB311EE3A89C00992074 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A77DB301EE3A89C00992074 /* Task.m */; };
+		9A77DB341EE3F89B00992074 /* TMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A77DB331EE3F89B00992074 /* TMSignView.m */; };
 		9A7FFF411EDEBE420084C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF401EDEBE420084C772 /* main.m */; };
 		9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF431EDEBE420084C772 /* AppDelegate.m */; };
 		9A7FFF4A1EDEBE420084C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF481EDEBE420084C772 /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		9A7FFF681EDEBE420084C772 /* TimeManagerXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */; };
 		9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */; };
 		A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */; };
-		A64B99E01EE13E3D000ECB5A /* TMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99DF1EE13E3D000ECB5A /* TMSignView.m */; };
 		A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99EA1EE175D8000ECB5A /* TMPersonalViewController.m */; };
 		A65C0BCE1EE1DA32003B1D82 /* XLCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A65C0BCB1EE1DA32003B1D82 /* XLCircle.m */; };
 		A65C0BCF1EE1DA32003B1D82 /* XLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A65C0BCD1EE1DA32003B1D82 /* XLCircleProgress.m */; };
@@ -80,6 +80,8 @@
 		9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomePageViewController.m; sourceTree = "<group>"; };
 		9A77DB2F1EE3A89C00992074 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		9A77DB301EE3A89C00992074 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		9A77DB321EE3F89B00992074 /* TMSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignView.h; sourceTree = "<group>"; };
+		9A77DB331EE3F89B00992074 /* TMSignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignView.m; sourceTree = "<group>"; };
 		9A7FFF3C1EDEBE420084C772 /* TimeManagerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7FFF401EDEBE420084C772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A7FFF421EDEBE420084C772 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,7 +102,6 @@
 		9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomeViewController.m; sourceTree = "<group>"; };
 		A64B99DC1EE07D7D000ECB5A /* TMFunPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFunPageViewController.h; sourceTree = "<group>"; };
 		A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMFunPageViewController.m; sourceTree = "<group>"; };
-		A64B99DF1EE13E3D000ECB5A /* TMSignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignView.m; sourceTree = "<group>"; };
 		A64B99E91EE175D8000ECB5A /* TMPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPersonalViewController.h; sourceTree = "<group>"; };
 		A64B99EA1EE175D8000ECB5A /* TMPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPersonalViewController.m; sourceTree = "<group>"; };
 		A65C0BCA1EE1DA32003B1D82 /* XLCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCircle.h; sourceTree = "<group>"; };
@@ -109,7 +110,6 @@
 		A65C0BCD1EE1DA32003B1D82 /* XLCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCircleProgress.m; sourceTree = "<group>"; };
 		A67245C01EE1DC4E00CBDB45 /* TMPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanView.h; sourceTree = "<group>"; };
 		A67245C11EE1DC4E00CBDB45 /* TMPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanView.m; sourceTree = "<group>"; };
-		A67E34F61EE028240008EAF0 /* TMSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignView.h; sourceTree = "<group>"; };
 		A67E34FC1EE028FC0008EAF0 /* TMSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignViewController.h; sourceTree = "<group>"; };
 		A67E34FD1EE028FC0008EAF0 /* TMSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignViewController.m; sourceTree = "<group>"; };
 		A6AC0A921EE2ACBF0021E790 /* TMPlanCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanCreateViewController.h; sourceTree = "<group>"; };
@@ -415,8 +415,8 @@
 		A67E34F41EE027EC0008EAF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A67E34F61EE028240008EAF0 /* TMSignView.h */,
-				A64B99DF1EE13E3D000ECB5A /* TMSignView.m */,
+				9A77DB321EE3F89B00992074 /* TMSignView.h */,
+				9A77DB331EE3F89B00992074 /* TMSignView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -746,9 +746,9 @@
 				A67E34FE1EE028FC0008EAF0 /* TMSignViewController.m in Sources */,
 				9A7FFF411EDEBE420084C772 /* main.m in Sources */,
 				A65C0BCE1EE1DA32003B1D82 /* XLCircle.m in Sources */,
+				9A77DB341EE3F89B00992074 /* TMSignView.m in Sources */,
 				A65C0BCF1EE1DA32003B1D82 /* XLCircleProgress.m in Sources */,
 				A6AC0A9A1EE2E4050021E790 /* TMListPageViewController.m in Sources */,
-				A64B99E01EE13E3D000ECB5A /* TMSignView.m in Sources */,
 				9A254FC21EE292F4008BD29F /* TMPlanDetailViewController.m in Sources */,
 				9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */,
 				9A7FFF4D1EDEBE420084C772 /* TimeManagerX.xcdatamodeld in Sources */,

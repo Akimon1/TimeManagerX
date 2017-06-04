@@ -69,7 +69,7 @@
 #pragma mark - tableview Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -123,10 +123,6 @@
             break;
         case 3:
             [[cell textLabel]  setText:@"注销"];
-            cell.textLabel.textAlignment = NSTextAlignmentCenter;
-            break;
-        case 4:
-            [[cell textLabel]  setText:@"修改密码"];
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
             break;
         default:
