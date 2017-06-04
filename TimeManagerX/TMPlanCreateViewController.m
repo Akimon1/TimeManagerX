@@ -141,18 +141,16 @@
 
 -(void)finishEdit:(id)sender {
     if([_finishBtn isEqual:sender]){
-        //TODO
         BmobObject *newPlan = [BmobObject objectWithClassName:@"plan"];
-        
         //将数据与用户连接
         BmobUser *bmobUser = [BmobUser currentUser];
         if(bmobUser){
             [newPlan setObject:bmobUser.username      forKey:@"user_Name"];     //user
             
-            [newPlan setObject:[self planName]      forKey:@"plan_Name"];
-            [newPlan setObject:[self planTime]      forKey:@"plan_time"];
-            [newPlan setObject:[self planMotto]     forKey:@"plan_motto"];
-            [newPlan setObject:@(0)           forKey:@"plan_pain"];
+            [newPlan setObject:_planNameTextField.text                      forKey:@"plan_Name"];
+            [newPlan setObject:@(_planTimeTextField.text.integerValue)      forKey:@"plan_time"];
+            [newPlan setObject:_planMottoTextField.text                     forKey:@"plan_motto"];
+            [newPlan setObject:@(0)                                         forKey:@"plan_pain"];
 
             NSLog(@"planMotto is %@", [self planMotto]);
             NSLog(@"planName is%@", [self planName]);
