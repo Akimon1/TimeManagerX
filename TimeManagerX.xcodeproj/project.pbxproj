@@ -15,6 +15,7 @@
 		9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B71EE26F3600D5FBE6 /* TMPresentTaskViewController.m */; };
 		9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8BB1EE273A200D5FBE6 /* MZTimerLabel.m */; };
 		9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */; };
+		9A77DB311EE3A89C00992074 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A77DB301EE3A89C00992074 /* Task.m */; };
 		9A7FFF411EDEBE420084C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF401EDEBE420084C772 /* main.m */; };
 		9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF431EDEBE420084C772 /* AppDelegate.m */; };
 		9A7FFF4A1EDEBE420084C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF481EDEBE420084C772 /* Main.storyboard */; };
@@ -77,6 +78,8 @@
 		9A5AE8BB1EE273A200D5FBE6 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 		9A5DB2E01EDF0484001C1B8F /* TMHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMHomePageViewController.h; sourceTree = "<group>"; };
 		9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomePageViewController.m; sourceTree = "<group>"; };
+		9A77DB2F1EE3A89C00992074 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		9A77DB301EE3A89C00992074 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		9A7FFF3C1EDEBE420084C772 /* TimeManagerX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManagerX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7FFF401EDEBE420084C772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A7FFF421EDEBE420084C772 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 		9A5DB2E31EDF0492001C1B8F /* 列表 */ = {
 			isa = PBXGroup;
 			children = (
+				9A77DB2E1EE3A85F00992074 /* Model */,
 				9A5DB2EE1EDF0505001C1B8F /* Controller */,
 				9A5DB2ED1EDF04FE001C1B8F /* View */,
 			);
@@ -241,6 +245,15 @@
 				A6AC0A991EE2E4050021E790 /* TMListPageViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		9A77DB2E1EE3A85F00992074 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A77DB2F1EE3A89C00992074 /* Task.h */,
+				9A77DB301EE3A89C00992074 /* Task.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9A7FFF331EDEBE420084C772 = {
@@ -725,6 +738,7 @@
 				9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */,
 				A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */,
 				A6AC0AA01EE2E4130021E790 /* TMListCollectionViewFlowLayout.m in Sources */,
+				9A77DB311EE3A89C00992074 /* Task.m in Sources */,
 				A6AC0A9F1EE2E4130021E790 /* TMListCollectionViewCell.m in Sources */,
 				9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */,
 				9A254FBE1EE292E0008BD29F /* TMPlanDetailView.m in Sources */,

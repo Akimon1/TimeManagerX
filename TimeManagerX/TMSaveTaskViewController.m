@@ -223,7 +223,7 @@
         [newTask setObject:_startTimeLabel.text         forKey:@"task_From"];     //timeA
         [newTask setObject:_endTimeLabel.text         forKey:@"task_To"];       //timeB
         [newTask setObject:_lastingTimeLabel.text      forKey:@"task_Time"];     //taskTime
-        [newTask setObject:_taskDateLabel             forKey:@"task_Date"];     //taskDate
+        [newTask setObject:_taskDateLabel.text             forKey:@"task_Date"];     //taskDate
         [newTask setObject:_locationTextField.text  forKey:@"task_Location"]; //taskLocation input
         [newTask setObject:_memoTextView.text   forKey:@"task_Remarks"];  //taskRemarks
         
@@ -239,7 +239,7 @@
             } else if (error){
                 //发生错误后的动作
                 NSLog(@"%@",error);
-                [KVNProgress showErrorWithStatus:@"保存失败，遇到了不可预知的意外呢。"];
+                [KVNProgress showErrorWithStatus:@"保存失败，遇到了不可预知的意外呢。\n（请检查网络连接。）"];
             } else {
                 NSLog(@"Unknow error");
             }
