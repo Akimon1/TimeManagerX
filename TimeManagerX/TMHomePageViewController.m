@@ -105,7 +105,8 @@
     if([_ToPlanDetailBtn isEqual:sender]){
         _planDetailViewController = [TMPlanDetailViewController new];
         _planDetailViewController.hidesBottomBarWhenPushed = YES;
-
+        //根据当前planNameLabel的text(雅思托福)生成细节页面
+        _planDetailViewController.planNameStr = _planView.planNameLabel.text;
         [self.navigationController pushViewController:_planDetailViewController animated:true];
         self.hidesBottomBarWhenPushed=NO;
     }

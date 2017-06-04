@@ -28,7 +28,7 @@
     [self setupHeadViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
     [self setupIntrViewWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 60)];
     [self setupPeriodViewWithFrame:CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT-260)];
-    [self initData];
+    [self initDataWithPlanName:_planNameStr];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,11 +148,21 @@
     
 }
 
--(void) initData {
+-(void) initDataWithPlanName:(NSString *)planNameStr {
+    //TODO
+    //根据planNameStr从后台获取该计划的详情。
+    if(planNameStr == nil){
+        _mplanNameLabel.text = @"一级项目开发";
+        _mmottoLabel.text = @"做个快乐的程序猿";
+        _mgoalLabel.text = @"100 hours";
+        _minvestLabel.text = @"99 hours";
+        _mgainLabel.text = @"鼓励奖";
+    }
+    
     _mplanNameLabel.text = @"一级项目开发";
-    _mmottoLabel.text = @"不给自己的双手放假";
+    _mmottoLabel.text = @"做个快乐的程序猿";
     _mgoalLabel.text = @"100 hours";
-    _minvestLabel.text = @"70 hours";
+    _minvestLabel.text = @"99 hours";
     _mgainLabel.text = @"鼓励奖";
     
 }

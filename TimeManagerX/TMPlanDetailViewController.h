@@ -16,6 +16,6 @@
 
 @property (strong,nonatomic) UITableView *periodView;
 
-
+@property (strong,nonatomic) NSString *planNameStr;
 
 @end
