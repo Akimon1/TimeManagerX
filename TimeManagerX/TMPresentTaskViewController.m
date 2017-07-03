@@ -27,6 +27,7 @@
     [self setupCountLabel];
     [self setupTimeTimer];
     [self setupStateButton];
+    [self setupCountTime];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -139,6 +140,18 @@
     .centerXIs(SCREEN_WIDTH/2);
 }
 
+-(void) setupCountTime {
+    _countTimer = [NSTimer scheduledTimerWithTimeInterval:0.010f target:self selector:@selector(countTimerDisplay) userInfo:nil repeats:YES];
+}
+
+-(void) countTimerDisplay{
+    if (isRunning == YES){
+        _count =_count+1;
+        if(_count>6000)_count=1;
+        _circle.progress=_count*0.0001*10/6;
+    }
+}
+
 - (void)dateDisplay {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"YYYY年MM月dd日\n"];
@@ -168,11 +181,6 @@
     _timeLabel.layer.borderColor = [[UIColor grayColor]CGColor];
     _timeLabel.layer.borderWidth = 1;
     _timeLabel.layer.masksToBounds = YES;
-    if (isRunning == YES){
-        _count =_count+1;
-        if(_count>60)_count=1;
-        _circle.progress=_count*0.01*10/6;
-    }
 }
 
 - (NSString *)getWeekdayFromDate:(NSDate *)date {

@@ -23,6 +23,7 @@
 @property (nonatomic,strong)  UILabel *timeLabel;
 @property (nonatomic,strong)  NSTimer *dateTimer;
 @property (nonatomic,strong)  NSTimer *timeTimer;
+@property (nonatomic,strong)  NSTimer *countTimer;
 //圆形图
 @property (nonatomic,strong)  XLCircleProgress *circle;
 

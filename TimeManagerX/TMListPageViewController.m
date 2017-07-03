@@ -79,7 +79,7 @@ static NSString *cellIdentifier = @"CellIdentifier";
     [collectionView registerClass:[TMListCollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    collectionView.backgroundColor = [UIColor grayColor];
+    collectionView.backgroundColor = [UIColor colorWithRed:152/255.0 green:245/255.0 blue:255/255.0 alpha:1];
     [self.collectionView reloadData];
 }
 
