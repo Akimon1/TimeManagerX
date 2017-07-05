@@ -153,8 +153,8 @@
         [self presentViewController:_signViewController animated:true completion:nil];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-    [_alertController addAction:ok];
     [_alertController addAction:cancel];
+    [_alertController addAction:ok];
     [self presentViewController:_alertController animated:YES completion:nil];
 }
 

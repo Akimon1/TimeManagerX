@@ -18,12 +18,12 @@ static NSString *cellIdentifier = @"CellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [KVNProgress showWithStatus:@"加载中。。。。"];
     [self setupListPage];
     [self setTheRightButton];
     [self initArray];
     [self searchTabel];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +74,7 @@ static NSString *cellIdentifier = @"CellIdentifier";
 }
 -(void)setupCollectionView{
     TMListCollectionViewFlowLayout *layout = [[TMListCollectionViewFlowLayout alloc] init];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, knavigationHeight, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
     [self.view addSubview:collectionView];
     [collectionView registerClass:[TMListCollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
     collectionView.dataSource = self;

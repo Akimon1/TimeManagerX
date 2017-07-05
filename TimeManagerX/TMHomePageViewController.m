@@ -40,7 +40,10 @@
 
 -(void)toPlanListView:(id)sender{
     if ([_showPlanListBtn isEqual:sender]) {
-        //TODO
+        _planListViewController = [TMPlanListViewController new];
+        _planListViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:_planListViewController animated:true];
+        self.hidesBottomBarWhenPushed = NO;
     }
 }
 

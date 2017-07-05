@@ -13,6 +13,8 @@
 #import "TMPresentTaskViewController.h"
 #import "TMPlanDetailViewController.h"
 #import "TMPlanCreateViewController.h"
+#import "TMPlanListViewController.h"
+
 
 @interface TMHomePageViewController : UIViewController
 @property (nonatomic,strong) UIBarButtonItem *leftButton;
@@ -24,6 +26,8 @@
 @property (strong,nonatomic) TMPlanView *planView;
 @property (strong,nonatomic) UIButton *ToPlanDetailBtn;
 @property (nonatomic,strong) TMPlanDetailViewController *planDetailViewController;
+
+@property (strong,nonatomic) TMPlanListViewController *planListViewController;
 
 //右上方触发
 @property (strong,nonatomic) UIButton *createPlanBtn;

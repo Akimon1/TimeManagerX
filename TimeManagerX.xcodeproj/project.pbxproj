@@ -11,6 +11,8 @@
 		9A254FBE1EE292E0008BD29F /* TMPlanDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A254FBB1EE292E0008BD29F /* TMPlanDetailView.m */; };
 		9A254FBF1EE292E0008BD29F /* TMPlanCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */; };
 		9A254FC21EE292F4008BD29F /* TMPlanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */; };
+		9A3D91421F0CB4B7000C9754 /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3D91411F0CB4B7000C9754 /* Plan.m */; };
+		9A3D91481F0CB862000C9754 /* TMPlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3D91471F0CB862000C9754 /* TMPlanListViewController.m */; };
 		9A5AE8B21EE26EA600D5FBE6 /* TMSaveTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */; };
 		9A5AE8B81EE26F3600D5FBE6 /* TMPresentTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8B71EE26F3600D5FBE6 /* TMPresentTaskViewController.m */; };
 		9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AE8BB1EE273A200D5FBE6 /* MZTimerLabel.m */; };
@@ -70,6 +72,10 @@
 		9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanCreateView.m; sourceTree = "<group>"; };
 		9A254FC01EE292F4008BD29F /* TMPlanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanDetailViewController.h; sourceTree = "<group>"; };
 		9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanDetailViewController.m; sourceTree = "<group>"; };
+		9A3D91401F0CB4B7000C9754 /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
+		9A3D91411F0CB4B7000C9754 /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
+		9A3D91461F0CB862000C9754 /* TMPlanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPlanListViewController.h; sourceTree = "<group>"; };
+		9A3D91471F0CB862000C9754 /* TMPlanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPlanListViewController.m; sourceTree = "<group>"; };
 		9A5AE8B01EE26EA600D5FBE6 /* TMSaveTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSaveTaskViewController.h; sourceTree = "<group>"; };
 		9A5AE8B11EE26EA600D5FBE6 /* TMSaveTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSaveTaskViewController.m; sourceTree = "<group>"; };
 		9A5AE8B61EE26F3600D5FBE6 /* TMPresentTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPresentTaskViewController.h; sourceTree = "<group>"; };
@@ -156,6 +162,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A3D913F1F0CB47A000C9754 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9A3D91491F0CE8D6000C9754 /* 计划 */ = {
+			isa = PBXGroup;
+			children = (
+				9A3D914C1F0CE8F4000C9754 /* Controller */,
+				9A3D914B1F0CE8EE000C9754 /* View */,
+				9A3D914A1F0CE8E2000C9754 /* Model */,
+			);
+			name = "计划";
+			sourceTree = "<group>";
+		};
+		9A3D914A1F0CE8E2000C9754 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A3D91401F0CB4B7000C9754 /* Plan.h */,
+				9A3D91411F0CB4B7000C9754 /* Plan.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9A3D914B1F0CE8EE000C9754 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A254FBA1EE292E0008BD29F /* TMPlanDetailView.h */,
+				9A254FBB1EE292E0008BD29F /* TMPlanDetailView.m */,
+				9A254FBC1EE292E0008BD29F /* TMPlanCreateView.h */,
+				9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */,
+				A67245C01EE1DC4E00CBDB45 /* TMPlanView.h */,
+				A67245C11EE1DC4E00CBDB45 /* TMPlanView.m */,
+				A6AC0A951EE2B6A70021E790 /* TMPlanCreateCell.h */,
+				A6AC0A961EE2B6A70021E790 /* TMPlanCreateCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9A3D914C1F0CE8F4000C9754 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A254FC01EE292F4008BD29F /* TMPlanDetailViewController.h */,
+				9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */,
+				A6AC0A921EE2ACBF0021E790 /* TMPlanCreateViewController.h */,
+				A6AC0A931EE2ACBF0021E790 /* TMPlanCreateViewController.m */,
+				9A3D91461F0CB862000C9754 /* TMPlanListViewController.h */,
+				9A3D91471F0CB862000C9754 /* TMPlanListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		9A5AE8AC1EE26E7000D5FBE6 /* 即时任务 */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +341,7 @@
 		9A7FFF3E1EDEBE420084C772 /* TimeManagerX */ = {
 			isa = PBXGroup;
 			children = (
+				9A3D91491F0CE8D6000C9754 /* 计划 */,
 				9A5AE8AD1EE26E8000D5FBE6 /* 保存任务 */,
 				9A5AE8AC1EE26E7000D5FBE6 /* 即时任务 */,
 				A65C0BC91EE1DA18003B1D82 /* Frameworks */,
@@ -339,6 +400,7 @@
 		9AF45E3A1EDEC9E600C92B4D /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				9A3D913F1F0CB47A000C9754 /* Model */,
 				A65C0BD11EE1DA63003B1D82 /* View */,
 				9AF45E3C1EDECA0C00C92B4D /* Controller */,
 			);
@@ -352,10 +414,6 @@
 				9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */,
 				9A5DB2E01EDF0484001C1B8F /* TMHomePageViewController.h */,
 				9A5DB2E11EDF0484001C1B8F /* TMHomePageViewController.m */,
-				9A254FC01EE292F4008BD29F /* TMPlanDetailViewController.h */,
-				9A254FC11EE292F4008BD29F /* TMPlanDetailViewController.m */,
-				A6AC0A921EE2ACBF0021E790 /* TMPlanCreateViewController.h */,
-				A6AC0A931EE2ACBF0021E790 /* TMPlanCreateViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -391,14 +449,6 @@
 		A65C0BD11EE1DA63003B1D82 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A254FBA1EE292E0008BD29F /* TMPlanDetailView.h */,
-				9A254FBB1EE292E0008BD29F /* TMPlanDetailView.m */,
-				9A254FBC1EE292E0008BD29F /* TMPlanCreateView.h */,
-				9A254FBD1EE292E0008BD29F /* TMPlanCreateView.m */,
-				A67245C01EE1DC4E00CBDB45 /* TMPlanView.h */,
-				A67245C11EE1DC4E00CBDB45 /* TMPlanView.m */,
-				A6AC0A951EE2B6A70021E790 /* TMPlanCreateCell.h */,
-				A6AC0A961EE2B6A70021E790 /* TMPlanCreateCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -734,6 +784,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3D91421F0CB4B7000C9754 /* Plan.m in Sources */,
 				9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */,
 				9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */,
 				A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */,
@@ -755,6 +806,7 @@
 				9A5AE8B21EE26EA600D5FBE6 /* TMSaveTaskViewController.m in Sources */,
 				9A254FBF1EE292E0008BD29F /* TMPlanCreateView.m in Sources */,
 				A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */,
+				9A3D91481F0CB862000C9754 /* TMPlanListViewController.m in Sources */,
 				9A5DB2E21EDF0484001C1B8F /* TMHomePageViewController.m in Sources */,
 				A6AC0A941EE2ACBF0021E790 /* TMPlanCreateViewController.m in Sources */,
 				A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */,

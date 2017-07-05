@@ -72,14 +72,8 @@
 }
 
 -(void)initData {
-    //模拟数据
-    NSDictionary *dataSource = [NSDictionary dictionaryWithObjectsAndKeys:
-                                @"雅思托福",@"planName",
-                                @"2017/6/1 开始",@"startTime"
-                                , nil];
-
-    _planNameLabel.text = dataSource[@"planName"];
-    _startTimeLabel.text = dataSource[@"startTime"];
+    _planNameLabel.text = @"";
+    _startTimeLabel.text = @"";
     NSLog(@"initData");
 }
 
