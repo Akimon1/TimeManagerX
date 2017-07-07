@@ -26,7 +26,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor  = [UIColor whiteColor];
+    self.view.backgroundColor  = [UIColor colorWithRed:152/255.0 green:245/255.0 blue:255/255.0 alpha:1];
+    _welcomeLable = [UILabel new];
+    _welcomeLable.text = @"欢迎";
+    _welcomeLable.textAlignment = NSTextAlignmentCenter;
+    _welcomeLable.font = [UIFont fontWithName:@"Arial-BoldMT" size:35];
+    [self.view addSubview:_welcomeLable];
+    _welcomeLable.sd_layout
+    .widthIs(SCREEN_WIDTH)
+    .heightIs(SCREEN_HEIGHT*0.2)
+    .centerYEqualToView(self.view)
+    ;
 }
 
 - (void)didReceiveMemoryWarning {

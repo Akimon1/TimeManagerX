@@ -19,4 +19,5 @@
 @property (nonatomic,strong) UINavigationController *homePageNavigationController;
 @property (nonatomic,strong) UINavigationController *listPageNavigationController;
 @property (nonatomic,strong) UINavigationController *funPageNavigationController;
+@property (nonatomic,strong) UILabel *welcomeLable;
 @end
