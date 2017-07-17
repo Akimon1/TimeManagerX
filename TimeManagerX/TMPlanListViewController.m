@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [KVNProgress showWithStatus:@"加载中。。。。"];
     [self initArray];
     [self searchTable];
     [self setupPlanListView];

@@ -9,7 +9,7 @@
 #import "TMSaveTaskViewController.h"
 #import "TMHomeViewController.h"
 
-@interface TMSaveTaskViewController ()
+@interface TMSaveTaskViewController ()<CLLocationManagerDelegate>
 @property (nonatomic,strong) TMHomeViewController *homeViewController;
 @end
 
@@ -55,7 +55,7 @@
 -(void)setupDate{
     _dateLabel = [UILabel new];
     [self.view addSubview:_dateLabel];
-    _dateLabel.text = @"任务日期";
+    _dateLabel.text = @"任务日期：";
     _dateLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     _dateLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
     _dateLabel.sd_layout
@@ -79,7 +79,7 @@
 -(void)setupStartAndEndTime{
     _startLabel = [UILabel new];
     [self.view addSubview:_startLabel];
-    _startLabel.text = @"开始时间";
+    _startLabel.text = @"开始时间：";
     _startLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     _startLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
     _startLabel.sd_layout
@@ -101,7 +101,7 @@
     
     _endLabel = [UILabel new];
     [self.view addSubview:_endLabel];
-    _endLabel.text = @"结束时间";
+    _endLabel.text = @"结束时间：";
     _endLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     _endLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
     _endLabel.sd_layout
@@ -128,7 +128,7 @@
 -(void)setupLastingTime{
     _lastingLabel = [UILabel new];
     [self.view addSubview:_lastingLabel];
-    _lastingLabel.text = @"持续时间";
+    _lastingLabel.text = @"持续时间：";
     _lastingLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     _lastingLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
     _lastingLabel.sd_layout
@@ -152,7 +152,7 @@
 -(void)setupLocation{
     _locationLabel = [UILabel new];
     [self.view addSubview:_locationLabel];
-    _locationLabel.text = @"任务地点";
+    _locationLabel.text = @"任务地点：";
     _locationLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     _locationLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
     _locationLabel.sd_layout
@@ -160,6 +160,22 @@
     .topSpaceToView(_lastingLabel, SCREEN_WIDTH*0.05)
     .widthIs(SCREEN_WIDTH*0.3)
     .heightIs(SCREEN_HEIGHT*0.07);
+    
+    _locateButton = [UIButton new];
+    [_locateButton setTitle:@"获取定位" forState:UIControlStateNormal];
+    [_locateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _locateButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:20];
+    _locateButton.layer.cornerRadius = SCREEN_HEIGHT*0.035;
+    _locateButton.layer.masksToBounds = YES;
+    [_locateButton setBackgroundColor:[UIColor colorWithRed:152/255.0 green:245/255.0 blue:255/255.0 alpha:1]];
+    [_locateButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];      //设置title在button被选中情况下为灰色字体
+    [self.view addSubview:_locateButton];
+    [_locateButton addTarget:self action:@selector(toGetLocation) forControlEvents:UIControlEventTouchUpInside];
+    _locateButton.sd_layout
+    .heightIs(SCREEN_HEIGHT*0.07)
+    .widthIs(SCREEN_WIDTH*0.3)
+    .rightSpaceToView(self.view, SCREEN_WIDTH*0.05)
+    .centerYEqualToView(_locationLabel);
     
     _locationTextField = [UITextField new];
     [self.view addSubview:_locationTextField];
@@ -171,9 +187,9 @@
     _locationTextField.layer.borderWidth = 0.6f;
     _locationTextField.layer.cornerRadius = 6.0f;
     _locationTextField.sd_layout
-    .leftSpaceToView(_locationLabel, SCREEN_WIDTH*0.05)
-    .centerYEqualToView(_locationLabel)
-    .widthIs(SCREEN_WIDTH*0.55)
+    .leftEqualToView(_locationLabel)
+    .topSpaceToView(_locationLabel, SCREEN_HEIGHT*0.01)
+    .widthIs(SCREEN_WIDTH*0.9)
     .heightIs(SCREEN_HEIGHT*0.05);
 }
 
@@ -254,6 +270,69 @@
     [self.view endEditing:YES];
 }
 
+-(void) toGetLocation{
+    [self locate];
+}
+
+
+- (void)locate {
+    //判断定位功能是否打开
+    if ([CLLocationManager locationServicesEnabled]) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        [_locationManager requestAlwaysAuthorization];
+        _currentCity = [[NSString alloc] init];
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+#pragma mark CoreLocation delegate
+
+//定位失败则执行此代理方法
+//定位失败弹出提示框,点击"打开定位"按钮,会打开系统的设置,提示打开定位服务
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"允许\"定位\"提示" message:@"请在设置中打开定位" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * ok = [UIAlertAction actionWithTitle:@"打开定位" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //打开定位设置
+        NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        [[UIApplication sharedApplication] openURL:settingsURL];
+    }];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alertVC addAction:cancel];
+    [alertVC addAction:ok];
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
+}
+//定位成功
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    [_locationManager stopUpdatingLocation];
+    CLLocation *currentLocation = [locations lastObject];
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    
+    //反编码
+    [geoCoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count > 0) {
+            CLPlacemark *placeMark = placemarks[0];
+            _currentCity = placeMark.locality;
+            _currentLocation = placeMark.name;
+            if (!_currentCity) {
+                _currentCity = @"无法定位当前城市";
+            }
+            NSLog(@"%@",_currentCity); //这就是当前的城市
+            NSLog(@"%@",_currentLocation);//具体地址:  xx市xx区xx街道
+            self.locationTextField.text = _currentLocation;
+        }
+        else if (error == nil && placemarks.count == 0) {
+            NSLog(@"No location and error return");
+        }
+        else if (error) {
+            NSLog(@"location error: %@ ",error);
+        }
+        
+    }];
+}
 
 
 @end

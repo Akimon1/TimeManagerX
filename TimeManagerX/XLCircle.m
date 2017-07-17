@@ -106,22 +106,22 @@ static CGFloat endPointMargin = 1.0f;
     float x = 0,y = 0;//用于保存_dotView的frame
     switch (index) {
         case 0:
-            NSLog(@"第一象限");
+//            NSLog(@"第一象限");
             x = radius + sinf(needAngle)*radius;
             y = radius - cosf(needAngle)*radius;
             break;
         case 1:
-            NSLog(@"第二象限");
+//            NSLog(@"第二象限");
             x = radius + cosf(needAngle)*radius;
             y = radius + sinf(needAngle)*radius;
             break;
         case 2:
-            NSLog(@"第三象限");
+//            NSLog(@"第三象限");
             x = radius - sinf(needAngle)*radius;
             y = radius + cosf(needAngle)*radius;
             break;
         case 3:
-            NSLog(@"第四象限");
+//            NSLog(@"第四象限");
             x = radius - cosf(needAngle)*radius;
             y = radius - sinf(needAngle)*radius;
             break;

@@ -153,7 +153,7 @@
         _locationContentLabel.sd_layout
         .leftSpaceToView(_locationLabel, 14)
         .centerYEqualToView(_locationLabel)
-        .widthIs(80)
+        .widthIs(SCREEN_WIDTH*0.6)
         .autoHeightRatio(0);
         
         _memoLabel = [UILabel new];
