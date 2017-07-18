@@ -148,7 +148,7 @@
             [newPlan setObject:bmobUser.username      forKey:@"user_Name"];     //user
             
             [newPlan setObject:_planNameTextField.text                      forKey:@"plan_Name"];
-            [newPlan setObject:@(_planTimeTextField.text.integerValue)      forKey:@"plan_time"];
+            [newPlan setObject:_planTimeTextField.text                      forKey:@"plan_time"];
             [newPlan setObject:_planMottoTextField.text                     forKey:@"plan_motto"];
             [newPlan setObject:@(0)                                         forKey:@"plan_pain"];
 
