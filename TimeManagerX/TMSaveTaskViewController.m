@@ -323,6 +323,11 @@
             NSLog(@"%@",_currentCity); //这就是当前的城市
             NSLog(@"%@",_currentLocation);//具体地址:  xx市xx区xx街道
             self.locationTextField.text = _currentLocation;
+            if(_currentLocation){
+                [KVNProgress showSuccessWithStatus:@"获取当前位置成功！"];
+            }else{
+                [KVNProgress showErrorWithStatus:@"获取失败，请稍后再试！"];
+            }
         }
         else if (error == nil && placemarks.count == 0) {
             NSLog(@"No location and error return");

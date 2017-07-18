@@ -20,8 +20,6 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:nil];
     [self setupHomeView];
-
-    
 }
 
 - (void)viewDidLoad {
