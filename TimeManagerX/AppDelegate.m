@@ -28,7 +28,7 @@
     [UINavigationBar appearance].barTintColor = kTitle_bar_Color;
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:19.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
-    [Bmob registerWithAppKey:@"3d1fc089a61e9cd1449597f5887a4aa0"];
+    [Bmob registerWithAppKey:@"dfcbc1695e661c70e687361baf264133"];
     
     self.window.rootViewController = [[TMSignViewController alloc] init];
     [self.window makeKeyAndVisible];

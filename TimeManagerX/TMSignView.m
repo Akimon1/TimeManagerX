@@ -94,6 +94,7 @@
     _contentScrollView.showsHorizontalScrollIndicator = NO;
     _contentScrollView.pagingEnabled = YES;
     _contentScrollView.delegate = self;
+    _contentScrollView.bounces = NO;
     [self addSubview:_contentScrollView];
 }
 
@@ -167,8 +168,13 @@
             if(isSuccessful){
                 NSLog(@"signup successed");
                 [KVNProgress showSuccessWithStatus:@"注册成功\n确认注册邮件已发送"];
+                //注册成功跳转页面
+                _myViewController = [self getCurrentViewController:self];
+                NSLog(@"%@",NSStringFromClass([_myViewController class]));
+                TMHomeViewController *homeVC = [TMHomeViewController new];
+                [_myViewController presentViewController:homeVC animated:true completion:nil];
             }else{
-                [KVNProgress showErrorWithStatus:@"注册失败"];
+                [KVNProgress showErrorWithStatus:@"注册失败，请更换注册邮箱或检查网络连接"];
                 NSLog(@"%@",error);
             }
         }];
