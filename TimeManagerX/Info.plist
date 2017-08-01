@@ -43,5 +43,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>此 APP 需要获取您的同意才能使用照相机</string>
+    
+    <key>NSContactsUsageDescription</key>
+    <string>此 APP 需要获取您的同意才能使用通讯录</string>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>此 APP 需要获取您的同意才能使用麦克风</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>此 App 需要您的同意才能读取媒体资料库</string>
+    
+    <key>NSCalendarsUsageDescription</key>
+    <string>此 App 需要您的同意才能使用日历</string>
 </dict>
 </plist>

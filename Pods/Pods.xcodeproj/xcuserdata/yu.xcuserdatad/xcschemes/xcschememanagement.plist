@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FSCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,17 +72,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>099EF676B3B42EA75A9F0D299AE9FB61</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>16E26754EDE45A658B25426901C5DCAF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>575932F0AB99B63AA8B099F5661F0FB4</key>
+		<key>194CA4A44AEF55FBAA52A32217A05740</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +87,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7E6D09DA8B1E7DD2FB43AAF4EED94144</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>904F4F27FD314010A3812EB2A9306183</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9077373CFB94D884E53F1F0C61487798</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9558B2F5D1FA1159C370F9E8EF5FAB57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>959334E433470A1DA2FA7E527457C82B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A46AE4809527B2CB3345DCFF7C482F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,22 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E917E78F7EDEA0DF5782D632BA7C389</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9F2A60C0EB9345CAA8AFC9B2DF13EA15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0C21BA671124157AC4857094A2588E5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CDD0E6CEFE0B2FEA07CFF8B6122195ED</key>
+		<key>DAFD6A4CAF67BCE7AE216FEA8861E687</key>
 		<dict>
 			<key>primary</key>
 			<true/>

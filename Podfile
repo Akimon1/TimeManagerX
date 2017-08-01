@@ -16,6 +16,7 @@ target 'TimeManagerX' do
     pod 'pop'
     pod 'IQKeyboardManager'
     pod 'KVNProgress'
+    pod 'FSCalendar'
     #Reveal 软件框架
     pod 'Reveal-SDK', :configurations => ['Debug']
   target 'TimeManagerXTests' do

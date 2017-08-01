@@ -7,11 +7,15 @@
 //
 
 #import "TMListPageViewController.h"
+#import "TMcalenderViewController.h"
 
 
 static NSString *cellIdentifier = @"CellIdentifier";
 
 @interface TMListPageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property (nonatomic,strong) TMcalenderViewController *calenderViewController;
+
 @end
 
 @implementation TMListPageViewController
@@ -21,6 +25,7 @@ static NSString *cellIdentifier = @"CellIdentifier";
     self.automaticallyAdjustsScrollViewInsets = NO;
     [KVNProgress showWithStatus:@"加载中。。。。"];
     [self setupListPage];
+    [self setTheLiftButton];
     [self setTheRightButton];
     [self initArray];
     [self searchTabel];
@@ -124,6 +129,17 @@ static NSString *cellIdentifier = @"CellIdentifier";
     if(!_infoMutableArray.count){
         [KVNProgress showWithStatus:@"您还没有保存过任务。"];
     }
+}
+
+-(void)setTheLiftButton{                                                                     //设置导航栏右按钮
+    _leftButton = [[UIBarButtonItem alloc]initWithTitle:@"查看日历" style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    self.navigationItem.leftBarButtonItem = _leftButton;
+}
+-(void)leftAction{
+    _calenderViewController = [TMcalenderViewController new];
+    _calenderViewController.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:_calenderViewController  animated:true];
+    self.hidesBottomBarWhenPushed=NO;
 }
 
 

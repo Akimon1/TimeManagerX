@@ -27,6 +27,8 @@
 		9A7FFF521EDEBE420084C772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7FFF501EDEBE420084C772 /* LaunchScreen.storyboard */; };
 		9A7FFF5D1EDEBE420084C772 /* TimeManagerXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF5C1EDEBE420084C772 /* TimeManagerXTests.m */; };
 		9A7FFF681EDEBE420084C772 /* TimeManagerXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */; };
+		9AAEF3B81F309FFA00B1C93D /* TMcalenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAEF3B71F309FFA00B1C93D /* TMcalenderViewController.m */; };
+		9AAEF3BC1F30A77300B1C93D /* LunarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAEF3BB1F30A77300B1C93D /* LunarFormatter.m */; };
 		9AF45E421EDECA6F00C92B4D /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */; };
 		A64B99DE1EE07D7D000ECB5A /* TMFunPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99DD1EE07D7D000ECB5A /* TMFunPageViewController.m */; };
 		A64B99EB1EE175D8000ECB5A /* TMPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64B99EA1EE175D8000ECB5A /* TMPersonalViewController.m */; };
@@ -104,6 +106,10 @@
 		9A7FFF671EDEBE420084C772 /* TimeManagerXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManagerXUITests.m; sourceTree = "<group>"; };
 		9A7FFF691EDEBE420084C772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7FFF761EDEC1280084C772 /* TM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TM-Prefix.pch"; sourceTree = "<group>"; };
+		9AAEF3B61F309FFA00B1C93D /* TMcalenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMcalenderViewController.h; sourceTree = "<group>"; };
+		9AAEF3B71F309FFA00B1C93D /* TMcalenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMcalenderViewController.m; sourceTree = "<group>"; };
+		9AAEF3BA1F30A77300B1C93D /* LunarFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunarFormatter.h; sourceTree = "<group>"; };
+		9AAEF3BB1F30A77300B1C93D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
 		9AF45E401EDECA6F00C92B4D /* TMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMHomeViewController.h; sourceTree = "<group>"; };
 		9AF45E411EDECA6F00C92B4D /* TMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomeViewController.m; sourceTree = "<group>"; };
 		A64B99DC1EE07D7D000ECB5A /* TMFunPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMFunPageViewController.h; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 		9A7FFF3E1EDEBE420084C772 /* TimeManagerX */ = {
 			isa = PBXGroup;
 			children = (
+				9AAEF3B51F309FE000B1C93D /* 日历 */,
 				9A3D91491F0CE8D6000C9754 /* 计划 */,
 				9A5AE8AD1EE26E8000D5FBE6 /* 保存任务 */,
 				9A5AE8AC1EE26E7000D5FBE6 /* 即时任务 */,
@@ -395,6 +402,25 @@
 				9A7FFF4B1EDEBE420084C772 /* TimeManagerX.xcdatamodeld */,
 			);
 			name = TMModel;
+			sourceTree = "<group>";
+		};
+		9AAEF3B51F309FE000B1C93D /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				9AAEF3B91F30A75E00B1C93D /* LunarFormatter */,
+				9AAEF3B61F309FFA00B1C93D /* TMcalenderViewController.h */,
+				9AAEF3B71F309FFA00B1C93D /* TMcalenderViewController.m */,
+			);
+			name = "日历";
+			sourceTree = "<group>";
+		};
+		9AAEF3B91F30A75E00B1C93D /* LunarFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				9AAEF3BA1F30A77300B1C93D /* LunarFormatter.h */,
+				9AAEF3BB1F30A77300B1C93D /* LunarFormatter.m */,
+			);
+			name = LunarFormatter;
 			sourceTree = "<group>";
 		};
 		9AF45E3A1EDEC9E600C92B4D /* 首页 */ = {
@@ -786,8 +812,10 @@
 			files = (
 				9A3D91421F0CB4B7000C9754 /* Plan.m in Sources */,
 				9A7FFF441EDEBE420084C772 /* AppDelegate.m in Sources */,
+				9AAEF3B81F309FFA00B1C93D /* TMcalenderViewController.m in Sources */,
 				9A5AE8BC1EE273A200D5FBE6 /* MZTimerLabel.m in Sources */,
 				A67245C21EE1DC4E00CBDB45 /* TMPlanView.m in Sources */,
+				9AAEF3BC1F30A77300B1C93D /* LunarFormatter.m in Sources */,
 				A6AC0AA01EE2E4130021E790 /* TMListCollectionViewFlowLayout.m in Sources */,
 				9A77DB311EE3A89C00992074 /* Task.m in Sources */,
 				A6AC0A9F1EE2E4130021E790 /* TMListCollectionViewCell.m in Sources */,
